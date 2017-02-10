@@ -7,6 +7,7 @@ import createPromiseMiddleware from 'redux-promise-middleware'
 import {Router, Route, IndexRoute, browserHistory} from 'react-router'
 import App from './App';
 import Home from './components/Home';
+import Search from './components/search/Search';
 import goldonApp from './reducers'
 import 'bootstrap/dist/css/bootstrap.css'
 import './index.css'
@@ -22,6 +23,7 @@ ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home}/>
+      <Route path="/search" component={Search} />
     </Route>
   </Router>
 </Provider>, document.getElementById('root'));
