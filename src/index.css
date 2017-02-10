@@ -1,0 +1,18 @@
+body {
+  direction: rtl;
+  font-family: 'BYekan';
+  background: '#f7f8fa';
+}
+
+button {
+  font-family: 'BYekan';
+}
+
+@font-face {
+  font-family: 'BYekan';
+  src: url('./static/fonts/BYekan.woff') format('woff');
+}
+
+.table td {
+  padding: .4rem;
+}

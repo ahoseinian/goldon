@@ -1,0 +1,7 @@
+extends ../../layout
+block content
+  form.card.card-block.mt-3(method="post", enctype="multipart/form-data")
+    input(type="hidden", name="id", value=id)
+    .form-group
+      input.form-control(type="file", name="image")
+    button.btn.btn-primary Add Image

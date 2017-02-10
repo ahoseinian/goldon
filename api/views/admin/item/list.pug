@@ -1,0 +1,25 @@
+.card.card-block.mt-2.p-2
+  table.table.table-bordered
+    tr
+      th name
+      th size
+      th price
+      th model
+      th #
+      th images
+      th Edit
+    each item in items
+      tr(class=item.hidden? 'bg-muted text-muted':'')
+        td= item.name
+        td= item.size
+        td= item.price
+        td= models.find(x => x.value === item.model ).label
+        td.small= item.id
+        td.small
+          a.btn.btn-primary(href='/admin/items/'+item.id+'/images') +
+          each img in item.images
+            div.card
+              +thumb(img, 50)
+              a.btn.btn-sm(href="/admin/images/"+img+"/remove") remove
+        td
+          a.btn.btn-sm(href="/admin/items/"+item.id+'/remove') Toggle VISIBILITY

@@ -1,0 +1,24 @@
+.card.mt-2
+  .card-header
+    h3 new item
+  .card-block
+    form.mt-3(method="post")
+      .form-group
+        input.form-control(name="name", placeholder="name")
+      .form-group
+        input.form-control(name="price", type="number", placeholder="price")
+      .form-group
+        select.form-control(name="model")
+          each model in models
+            option(value=model.value)= model.label
+      .form-group.row
+        .col-4
+          input.form-control(name="size[tool]", type="number", step="0.1", placeholder="tool")
+        .col-4
+          input.form-control(name="size[arz]", type="number", step="0.1", placeholder="arz")
+        .col-4
+          input.form-control(name="size[ertefa]", type="number", step="0.1", placeholder="ertefa")
+
+      .form-group
+        button.btn.btn-primary(type="submit") Add
+        button.btn.btn-secondary(type="reset") Reset

@@ -1,0 +1,11 @@
+body {
+  direction: rtl !important;
+}
+
+th {
+  text-align: right;
+}
+
+.bg-muted{
+  background: #ddd;
+}
