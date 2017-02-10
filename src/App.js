@@ -6,6 +6,11 @@ import PageHead from './components/PageHead'
 import ItemList from './components/items/list'
 import Search from './components/items/Search'
 import TopBar from './components/TopBar'
+import styled from 'styled-components'
+
+const AppContainer = styled.div`
+  padding-top: 3.5rem;
+`
 
 class App extends Component {
   componentDidMount() {
@@ -16,14 +21,14 @@ class App extends Component {
   render() {
     const {items} = this.props
     return (
-      <div>
+      <AppContainer>
         <TopBar/>
         <PageHead/>
         <div className="container">
           <Search/>
           <ItemList items={items}/>
         </div>
-      </div>
+      </AppContainer>
     );
   }
 }

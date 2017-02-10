@@ -8,7 +8,6 @@ const BackDrop = styled.div `
   background-size: cover;
   height: 300px;
   margin-bottom: 1rem;
-  margin-top: 3rem;
 `
 const Title = styled.h1 `
   font-size: 2rem;
@@ -19,7 +18,7 @@ const Title = styled.h1 `
 `
 
 const PageHead = () => (
-  <BackDrop className="d-flex justify-content-center align-items-center">
+  <BackDrop className="d-flex justify-content-center align-items-center hidden-xs-down">
     <Title>میاریم اولین فروشنده ی گل و گیاه آنلاین خوار میانه</Title>
   </BackDrop>
 )
