@@ -2,9 +2,12 @@ var Item = require('../../../models/item')
 var Image = require('../../../models/image')
 var async = require('async')
 var formidable = require('formidable');
-var sharp = require('sharp')
+var lwip = require('lwip')
 var path = require('path')
 
+function getFilePath(imageId, size) {
+  return path.join(__dirname, '/../../../storage/images', size, imageId + '.jpg')
+}
 
 module.exports = function(req, res, next) {
   async
@@ -15,33 +18,41 @@ module.exports = function(req, res, next) {
           cb(err, files)
         })
       },
-      image: function(cb) {
+      imageModel: function(cb) {
         var image = new Image({});
         image.save(cb)
       },
-      saveImage: function(files, image, cb) {
-        var savePath = path.join(__dirname, '/../../../storage/images/original', image[0].id + '.jpg')
-        sharp(files.image.path).toFile(savePath, cb)
-      },
-      saveThumb: function(files, image, cb) {
-        var savePath = path.join(__dirname, '/../../../storage/images/thumbs', image[0].id + '.jpg')
-        sharp(files.image.path)
-          .resize(200)
-          .toFile(savePath, cb)
-      },
-      saveFifty: function(files, image, cb) {
-        var savePath = path.join(__dirname, '/../../../storage/images/50', image[0].id + '.jpg')
-        sharp(files.image.path)
-          .resize(50)
-          .toFile(savePath, cb)
+      saveImages: function(imageModel, files, cb) {
+        lwip
+          .open(files.image.path, 'jpg', function(err, image) {
+            async.series([
+              function(callback) {
+                image
+                  .batch()
+                  .writeFile(getFilePath(imageModel[0].id, 'original'), callback)
+              },
+              function(callback) {
+                image
+                  .batch()
+                  .resize(200)
+                  .writeFile(getFilePath(imageModel[0].id, 'thumbs'), callback)
+              },
+              function(callback) {
+                image
+                  .batch()
+                  .resize(50)
+                  .writeFile(getFilePath(imageModel[0].id, '50'), callback)
+              }
+            ], cb);
+          });
       },
       item: function(cb) {
         Item.findById(req.params.id, cb)
       },
-      addImage: function(item, image, cb) {
+      addImage: function(item, imageModel, cb) {
         item
           .images
-          .push(image[0])
+          .push(imageModel[0])
         item.save(cb)
       }
 

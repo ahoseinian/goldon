@@ -15,18 +15,6 @@ var storagePath = path.join(__dirname, './storage')
 
 var app = express();
 
-app.use(require('./routes'))
-
-app.use(session({
-  secret: 'keyboard cat',
-  saveUninitialized: true,
-  resave: false,
-  store: new MongoStore({
-    mongooseConnection: mongoose.connection
-  })
-}));
-app.use(passport.initialize());
-app.use(passport.session());
 
 app.use(express.static(buildPath))
 app.use(express.static(storagePath))
@@ -43,6 +31,20 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+
+app.use(session({
+  secret: 'keyboard cat',
+  saveUninitialized: true,
+  resave: false,
+  store: new MongoStore({
+    mongooseConnection: mongoose.connection
+  })
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(require('./routes'));
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -55,6 +57,7 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
+  console.error(err);
 
   // render the error page
   res.status(err.status || 500);

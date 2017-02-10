@@ -7,6 +7,7 @@ var adminUser = {
 }
 
 passport.use(new LocalStrategy(function(username, password, done) {
+  console.log(username, password)
   if (username !== 'mamad' || password !== 'zxcvb') {
     return done(null, false, {message: 'Incorrect username or password.'});
   }
