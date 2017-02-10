@@ -12,7 +12,7 @@ class Search extends Component {
   }
 
   render() {
-    const {search} = this.props
+    const {search, setSearchValue} = this.props
     return (
       <div className="container">
         <Card className="card card-block">
@@ -24,7 +24,8 @@ class Search extends Component {
               name="form-field-name"
               placeholder="مدل محصول"
               value={search.model}
-              options={models}/>
+              options={models}
+              onChange={setSearchValue.bind(null, 'model')}/>
             <FormButtons/>
           </form>
         </Card>

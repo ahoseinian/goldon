@@ -1,17 +1,17 @@
 import React from 'react'
 import {PrimaryButton, Button} from '../common/Button'
-import Icon from '../common/Icon'
-
+import {Link} from 'react-router'
 
 export default() => (
   <div className="row">
     <div className="col-6">
       <Button className="btn-block" type="reset">
-        <Icon name="refresh"/>
         ریست</Button>
     </div>
     <div className="col-6">
-      <PrimaryButton className="btn-block" type="submit">اعمال فیلتر</PrimaryButton>
+      <Link to="/">
+        <PrimaryButton className="btn-block" type="submit">اعمال فیلتر</PrimaryButton>
+      </Link>
     </div>
   </div>
 
