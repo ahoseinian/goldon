@@ -1,12 +1,19 @@
 import React from 'react'
 import CartIcon from './CartIcon'
 import SearchButton from '../search/SearchButton'
+import HomeLink from '../common/Links/HomeLink'
 
-const ContactBar = () => (
-  <div className="d-flex justify-content-between py-2">
-    <SearchButton />
-    <CartIcon/>
-  </div>
-)
+const CartBar = ({location}) => {
+  console.log(location);
+  const TopLink = location.pathname === '/search'
+    ? <HomeLink/>
+    : <SearchButton/>
+  return (
+    <div className="d-flex justify-content-between py-2">
+      {TopLink}
+      <CartIcon/>
+    </div>
+  )
+}
 
-export default ContactBar
+export default CartBar

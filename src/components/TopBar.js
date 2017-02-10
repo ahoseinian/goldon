@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {color} from './theme'
-import ContactBar from './cart/CartBar'
+import CartBar from './cart/CartBar'
 import Cart from './cart/Cart'
 
 export const Container = styled.div `
@@ -12,13 +12,15 @@ export const Container = styled.div `
   z-index: 3;
   width: 100%;
 `
-const TopBar = ({children}) => (
-  <Container>
-    <div className="container">
-      <ContactBar/>
-      <Cart/>
-    </div>
-  </Container>
-)
+const TopBar = ({location}) => {
+  return (
+    <Container>
+      <div className="container">
+        <CartBar location={location}/>
+        <Cart/>
+      </div>
+    </Container>
+  )
+}
 
 export default TopBar

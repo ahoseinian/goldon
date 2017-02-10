@@ -9,10 +9,10 @@ const AppContainer = styled.div `
 
 class App extends Component {
   render() {
-    const {children} = this.props
+    const {children, location} = this.props
     return (
       <AppContainer>
-        <TopBar/>
+        <TopBar location={location}/>
         <PageHead/>
         <div>
           {children}
