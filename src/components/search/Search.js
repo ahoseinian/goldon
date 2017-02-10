@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import models from '../../../api/models/models'
 import Select from 'react-select';
 import {connect} from 'react-redux'
-import {setSearchValue} from '../../actions'
+import {setSearchValue, resetSearch} from '../../actions'
 import Card from '../common/Card'
 import FormButtons from './FormButtons'
 
@@ -12,7 +12,7 @@ class Search extends Component {
   }
 
   render() {
-    const {search, setSearchValue} = this.props
+    const {search, setSearchValue, resetSearch} = this.props
     return (
       <div className="container">
         <Card className="card card-block">
@@ -26,7 +26,7 @@ class Search extends Component {
               value={search.model}
               options={models}
               onChange={setSearchValue.bind(null, 'model')}/>
-            <FormButtons/>
+            <FormButtons handleReset={resetSearch}/>
           </form>
         </Card>
       </div>
@@ -34,4 +34,4 @@ class Search extends Component {
   }
 }
 
-export default connect((state) => ({search: state.search}), ({setSearchValue}))(Search)
+export default connect((state) => ({search: state.search}), ({setSearchValue, resetSearch}))(Search)

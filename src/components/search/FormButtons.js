@@ -2,10 +2,10 @@ import React from 'react'
 import {PrimaryButton, Button} from '../common/Button'
 import {Link} from 'react-router'
 
-export default() => (
+export default({handleReset}) => (
   <div className="row">
     <div className="col-6">
-      <Button className="btn-block" type="reset">
+      <Button className="btn-block" onClick={handleReset}>
         ریست</Button>
     </div>
     <div className="col-6">

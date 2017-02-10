@@ -1,5 +1,12 @@
 import request from 'superagent'
-import {GET_ALL_ITEMS, SET_SEARCH_VALUE, ADD_ITEM_TO_CART, TOGGLE_CART_VISIBILITY, REMOVE_FROM_CART} from './action-types'
+import {
+  GET_ALL_ITEMS,
+  SET_SEARCH_VALUE,
+  ADD_ITEM_TO_CART,
+  TOGGLE_CART_VISIBILITY,
+  REMOVE_FROM_CART,
+  RESET_SEARCH
+} from './action-types'
 
 export const getAllItems = () => ({
   type: GET_ALL_ITEMS,
@@ -10,3 +17,4 @@ export const setSearchValue = (field, payload) => ({type: SET_SEARCH_VALUE, fiel
 export const addItemToCart = (item) => ({type: ADD_ITEM_TO_CART, item})
 export const toggleCartVisibility = () => ({type: TOGGLE_CART_VISIBILITY})
 export const removeFromCart = (item) => ({type: REMOVE_FROM_CART, item})
+export const resetSearch = () => ({type: RESET_SEARCH})

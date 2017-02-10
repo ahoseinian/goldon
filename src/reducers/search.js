@@ -1,4 +1,4 @@
-import {SET_SEARCH_VALUE} from '../actions/action-types'
+import {SET_SEARCH_VALUE, RESET_SEARCH} from '../actions/action-types'
 import omit from 'lodash.omit'
 
 const defaultState = {}
@@ -13,6 +13,8 @@ const search = (state = defaultState, action) => {
       } else {
         return omit(state, action.field)
       }
+    case RESET_SEARCH:
+      return {}
     default:
       return state
   }
