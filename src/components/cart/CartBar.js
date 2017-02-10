@@ -4,7 +4,6 @@ import SearchButton from '../search/SearchButton'
 import HomeLink from '../common/Links/HomeLink'
 
 const CartBar = ({location}) => {
-  console.log(location);
   const TopLink = location.pathname === '/search'
     ? <HomeLink/>
     : <SearchButton/>

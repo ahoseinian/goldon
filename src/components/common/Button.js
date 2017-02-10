@@ -3,13 +3,14 @@ import {color} from '../theme'
 
 export const Button = styled.button `
   cursor: pointer;
-  color: ${color.white};
-  background: ${color.dark};
-  border: none;
+  color: ${color.dark};
+  background: ${color.white};
+  border: 1px solid ${color.normal};
   padding: .1rem .5rem;
   border-radius: .2rem;
 `
 
 export const PrimaryButton = styled(Button)`
   background: ${color.dark}
+  color: ${color.white};
 `
