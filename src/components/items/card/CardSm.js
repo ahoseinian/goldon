@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {connect} from 'react-redux'
+import {Link} from 'react-router'
 import ItemCard from '../../common/Card'
 import {addItemToCart} from '../../../actions'
 import ItemImage from '../Image'
@@ -17,17 +18,20 @@ const ItemName = styled.div `
 `
 
 const Card = ({item, addItemToCart}) => (
-  <ItemCard className="card">
-    <div className="row">
-      <div className="col-5">
-        <ItemImage id={item.images[0]}/>
+  <Link to={`/items/${item.id}/${item.name}`}>
+
+    <ItemCard className="card">
+      <div className="row">
+        <div className="col-5">
+          <ItemImage id={item.images[0]}/>
+        </div>
+        <div className="col-7">
+          <ItemName>{item.name}</ItemName>
+          <PriceRow price={item.price} handleClick={addItemToCart.bind(null, item)}/>
+        </div>
       </div>
-      <div className="col-7">
-        <ItemName>{item.name}</ItemName>
-        <PriceRow price={item.price} handleClick={addItemToCart.bind(null, item)}/>
-      </div>
-    </div>
-  </ItemCard>
+    </ItemCard>
+  </Link>
 )
 
 export default connect(null, ({addItemToCart}))(Card)

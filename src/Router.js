@@ -10,7 +10,7 @@ const RouterComponent = () => (
     <Route path="/" component={App}>
       <IndexRoute component={Home}/>
       <Route path="/search" component={Search} />
-      <Route path="/items/:id" component={Single} />
+      <Route path="/items/:id(/:name)" component={Single} />
     </Route>
   </Router>
 );
