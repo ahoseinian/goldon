@@ -10,7 +10,8 @@ import Price from './Price'
 import {color} from '../../theme'
 
 const Wrapper = styled.div `
-  padding: 1rem 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 `
 const ItemName = styled.h1 `
   color:${color.grey};
@@ -31,7 +32,7 @@ const Signle = ({item, addItemToCart}) => item
         <div className="col-sm-4">
           <ItemImage id={item.images[0]}/>
         </div>
-        <div className="col-sm-8">
+        <div className="col-sm-8 mt-2">
           <ItemName>{item.name}</ItemName>
           <div className="row">
             <div className="col-sm-7 mt-1">
