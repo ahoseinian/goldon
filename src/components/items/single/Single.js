@@ -1,27 +1,44 @@
 import React from 'react';
 import {connect} from 'react-redux'
+import styled from 'styled-components'
+import {Button} from '../../common/Button'
+import Icon from '../../common/Icon'
 import ItemImage from '../Image'
 import findById from '../../../reducers/items/findById'
 import Price from './Price'
-import styled from 'styled-components'
 import {color} from '../../theme'
 
+const Wrapper = styled.div`
+  padding-bottom: 1rem;
+`
 const ItemName = styled.h1 `
   color:${color.grey};
   text-align: center;
   line-height: 3rem;
   padding: 1rem .5rem;
 `
+const AddButton = styled(Button)`
+  padding: 1rem;
+  width: 100%;
+`
 
 const Signle = ({item}) => item
   ? (
-    <div>
+    <Wrapper>
       <div className="container">
         <ItemImage id={item.images[0]}/>
         <ItemName>{item.name}</ItemName>
       </div>
       <Price amount={item.price}/>
-    </div>
+      <div className="container">
+        <AddButton className="btn-block">
+          <Icon name="plus"/>
+          <span className="mr-2">
+            اضافه کردن به سبد خرید
+          </span>
+        </AddButton>
+      </div>
+    </Wrapper>
   )
   : null
 
