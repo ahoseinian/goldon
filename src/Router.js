@@ -11,6 +11,7 @@ const RouterComponent = () => (
       <IndexRoute component={Home}/>
       <Route path="/search" component={Search} />
       <Route path="/items/:id(/:name)" component={Single} />
+      <Route path="*" component={Home}/>
     </Route>
   </Router>
 );
