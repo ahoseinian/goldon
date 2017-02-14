@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import {connect} from 'react-redux'
 import {Link} from 'react-router'
 import ItemCard from '../../common/Card'
-import {addItemToCart} from '../../../actions'
 import ItemImage from '../Image'
 import PriceRow from './PriceRow'
 
@@ -27,11 +25,11 @@ const Card = ({item, addItemToCart}) => (
         </div>
         <div className="col-7">
           <ItemName>{item.name}</ItemName>
-          <PriceRow price={item.price} handleClick={addItemToCart.bind(null, item)}/>
+          <PriceRow price={item.price} />
         </div>
       </div>
     </ItemCard>
   </Link>
 )
 
-export default connect(null, ({addItemToCart}))(Card)
+export default Card
