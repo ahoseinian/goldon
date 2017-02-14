@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
+import {addItemToCart} from '../../../actions/index'
 import styled from 'styled-components'
 import {Button} from '../../common/Button'
 import Icon from '../../common/Icon'
@@ -22,7 +23,7 @@ const AddButton = styled(Button)`
   width: 100%;
 `
 
-const Signle = ({item}) => item
+const Signle = ({item, addItemToCart}) => item
   ? (
     <Wrapper>
       <div className="container">
@@ -31,7 +32,7 @@ const Signle = ({item}) => item
       </div>
       <Price amount={item.price}/>
       <div className="container">
-        <AddButton className="btn-block">
+        <AddButton className="btn-block" onClick={addItemToCart.bind(null, item)}>
           <Icon name="plus"/>
           <span className="mr-2">
             اضافه کردن به سبد خرید
@@ -50,4 +51,4 @@ Signle.propTypes = {
 
 export default connect((state, {params}) => ({
   item: findById(state.items, params.id)
-}))(Signle);
+}), {addItemToCart})(Signle);

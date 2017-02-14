@@ -4,11 +4,6 @@ import {getSearchedItems} from '../reducers/search'
 import ItemList from './items/list'
 
 class Home extends Component {
-  componentDidMount() {
-    this
-      .props
-      .getAllItems()
-  }
   render() {
     const {items} = this.props
     return (
