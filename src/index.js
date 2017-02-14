@@ -4,11 +4,8 @@ import {createStore, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
 import createLogger from 'redux-logger'
 import createPromiseMiddleware from 'redux-promise-middleware'
-import {Router, Route, IndexRoute, browserHistory} from 'react-router'
-import App from './App';
-import Home from './components/Home';
-import Search from './components/search/Search';
 import goldonApp from './reducers'
+import Router from './Router'
 import 'bootstrap/dist/css/bootstrap.css'
 import './index.css'
 import 'react-select/dist/react-select.css'
@@ -20,10 +17,5 @@ const store = createStore(goldonApp, applyMiddleware(logger, promiseMiddleware))
 
 ReactDOM.render(
   <Provider store={store}>
-  <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute component={Home}/>
-      <Route path="/search" component={Search} />
-    </Route>
-  </Router>
+  <Router/>
 </Provider>, document.getElementById('root'));
