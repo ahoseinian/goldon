@@ -9,7 +9,7 @@ const Sizes = ({size}) => (
     <small>{size.arz}</small>
     <small>*</small>
     <small>{size.ertefa}</small>
-    <small>سانتی متر</small>
+    <small className="mr-1">سانتی متر</small>
   </div>
 )
 
