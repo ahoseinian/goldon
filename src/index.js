@@ -14,7 +14,7 @@ import './index.css'
 import 'react-select/dist/react-select.css'
 import 'font-awesome/css/font-awesome.css'
 
-const logger = createLogger();
+const logger = createLogger({collapsed: true});
 const promiseMiddleware = createPromiseMiddleware();
 const store = createStore(goldonApp, applyMiddleware(logger, promiseMiddleware))
 
