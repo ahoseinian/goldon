@@ -14,7 +14,7 @@ const Currency = styled.small`
 `
 
 const Price = ({amount}) => (
-  <Container className="d-flex justify-content-center h4">
+  <Container className="d-flex justify-content-center h4 m-0 h-100">
     <div className="price">{amount.toLocaleString()}</div>
     <Currency>تومان</Currency>
   </Container>

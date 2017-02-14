@@ -9,8 +9,8 @@ import findById from '../../../reducers/items/findById'
 import Price from './Price'
 import {color} from '../../theme'
 
-const Wrapper = styled.div`
-  padding-bottom: 1rem;
+const Wrapper = styled.div `
+  padding: 1rem 0;
 `
 const ItemName = styled.h1 `
   color:${color.grey};
@@ -19,25 +19,34 @@ const ItemName = styled.h1 `
   padding: 1rem .5rem;
 `
 const AddButton = styled(Button)`
-  padding: 1rem;
+  padding: 1rem 2rem;
   width: 100%;
+  height: 100%;
 `
 
 const Signle = ({item, addItemToCart}) => item
   ? (
-    <Wrapper>
-      <div className="container">
-        <ItemImage id={item.images[0]}/>
-        <ItemName>{item.name}</ItemName>
-      </div>
-      <Price amount={item.price}/>
-      <div className="container">
-        <AddButton className="btn-block" onClick={addItemToCart.bind(null, item)}>
-          <Icon name="plus"/>
-          <span className="mr-2">
-            اضافه کردن به سبد خرید
-          </span>
-        </AddButton>
+    <Wrapper className="container">
+      <div className="row">
+        <div className="col-sm-4">
+          <ItemImage id={item.images[0]}/>
+        </div>
+        <div className="col-sm-8">
+          <ItemName>{item.name}</ItemName>
+          <div className="row">
+            <div className="col-sm-7 mt-1">
+              <Price amount={item.price}/>
+            </div>
+            <div className="col-sm-5 mt-1">
+              <AddButton className="btn-block" onClick={addItemToCart.bind(null, item)}>
+                <Icon name="plus"/>
+                <span className="mr-2">
+                  اضافه کردن به سبد خرید
+                </span>
+              </AddButton>
+            </div>
+          </div>
+        </div>
       </div>
     </Wrapper>
   )
