@@ -2,7 +2,7 @@ import React from 'react'
 import {Small} from '../../common/typography/Small'
 
 const Disc = ({name, value, measure}) => (
-  <div className="text-center">
+  <div className="d-flex justify-content-between">
     <div>
       {name}:
     </div>
