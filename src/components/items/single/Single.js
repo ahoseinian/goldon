@@ -6,19 +6,21 @@ import Price from './Price'
 import styled from 'styled-components'
 import {color} from '../../theme'
 
-const ItemName = styled.h1`
+const ItemName = styled.h1 `
   color:${color.grey};
   text-align: center;
   line-height: 3rem;
-  padding-top: 2rem;
+  padding: 1rem .5rem;
 `
 
 const Signle = ({item}) => item
   ? (
-    <div className="container">
-      <ItemImage id={item.images[0]}/>
-      <ItemName>{item.name}</ItemName>
-      <Price amount={item.price} />
+    <div>
+      <div className="container">
+        <ItemImage id={item.images[0]}/>
+        <ItemName>{item.name}</ItemName>
+      </div>
+      <Price amount={item.price}/>
     </div>
   )
   : null
