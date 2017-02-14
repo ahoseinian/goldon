@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
-import {getAllItems} from '../actions'
 import {getSearchedItems} from '../reducers/search'
 import ItemList from './items/list'
-
 
 class Home extends Component {
   componentDidMount() {
@@ -23,6 +21,4 @@ class Home extends Component {
 
 export default connect((state) => ({
   items: getSearchedItems(state.items, state.search)
-}), (dispatch) => ({
-  getAllItems: () => dispatch(getAllItems())
-}))(Home);
+}))(Home)
