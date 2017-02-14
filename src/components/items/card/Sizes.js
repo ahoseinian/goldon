@@ -1,5 +1,4 @@
 import React from 'react'
-import Disc from './Disc'
 
 const Sizes = ({size}) => (
   <div className="d-flex pt-2">
