@@ -7,6 +7,9 @@ body {
 button {
   font-family: 'BYekan';
 }
+a:hover{
+  text-decoration: none;
+}
 
 @font-face {
   font-family: 'BYekan';

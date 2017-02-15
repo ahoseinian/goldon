@@ -5,6 +5,6 @@ import Icon from '../Icon'
 
 export default() => (
   <Link to="/">
-    <PrimaryButton><Icon name="home"/></PrimaryButton>
+    <PrimaryButton><Icon name="home"/> <small>خانه</small></PrimaryButton>
   </Link>
 )
