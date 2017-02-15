@@ -13,6 +13,6 @@ button {
   src: url('./static/fonts/BYekan.woff') format('woff');
 }
 
-.table td {
-  padding: .4rem;
+.table th{
+  text-align: right;
 }
