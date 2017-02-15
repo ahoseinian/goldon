@@ -9,11 +9,9 @@ import Sizes from './Sizes'
 const ItemName = styled.div `
   text-align:center;
   font-size: 1.2rem;
-  padding-top: .3rem;
+  padding-top: .7rem;
   padding-left: 1rem;
-  max-height: 1.5rem;
   line-height: 1.5rem;
-  overflow: hidden;
 `
 
 const Card = ({item, addItemToCart}) => (
