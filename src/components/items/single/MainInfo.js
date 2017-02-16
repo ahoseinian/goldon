@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components'
 import {color} from '../../theme'
-import {Button} from '../../common/Button'
 import Price from './Price'
-import Icon from '../../common/Icon'
+import PurchaseButton from './PurchaseButton'
 
 const ItemName = styled.h1 `
   color:${color.grey};
@@ -11,13 +10,8 @@ const ItemName = styled.h1 `
   line-height: 3rem;
   padding: 1rem .5rem;
 `
-const AddButton = styled(Button)`
-  padding: 1rem 2rem;
-  width: 100%;
-  height: 100%;
-`
 
-const MainInfo = ({item, addItemToCart}) => (
+const MainInfo = ({item}) => (
   <div>
     <ItemName>{item.name}</ItemName>
     <div className="row">
@@ -25,12 +19,7 @@ const MainInfo = ({item, addItemToCart}) => (
         <Price amount={item.price}/>
       </div>
       <div className="col-sm-5 mt-1">
-        <AddButton className="btn-block" onClick={addItemToCart.bind(null, item)}>
-          <Icon name="plus"/>
-          <span className="mr-2">
-            اضافه کردن به سبد خرید
-          </span>
-        </AddButton>
+        <PurchaseButton item={item} />
       </div>
     </div>
   </div>
@@ -38,7 +27,6 @@ const MainInfo = ({item, addItemToCart}) => (
 
 MainInfo.propTypes = {
   item: React.PropTypes.object.isRequired,
-  addItemToCart: React.PropTypes.func.isRequired
 };
 
 export default MainInfo;

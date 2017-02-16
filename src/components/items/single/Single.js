@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {addItemToCart} from '../../../actions/index'
 import styled from 'styled-components'
 import ItemImage from '../image/ImageGallery'
 import findById from '../../../reducers/items/findById'
@@ -20,7 +19,7 @@ const Signle = ({item, addItemToCart}) => item
           <ItemImage images={item.images}/>
         </div>
         <div className="col-sm-8 mt-2">
-          <MainInfo item={item} addItemToCart={addItemToCart}/>
+          <MainInfo item={item}/>
         </div>
       </div>
       <div className="row">
@@ -40,4 +39,4 @@ Signle.propTypes = {
 
 export default connect((state, {params}) => ({
   item: findById(state.items, params.id)
-}), {addItemToCart})(Signle);
+}))(Signle);
