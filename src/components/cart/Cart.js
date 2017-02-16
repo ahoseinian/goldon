@@ -4,7 +4,7 @@ import CartTable from '../items/TableList'
 import CheckOutBar from './CheckOutBar'
 import getSum from '../../reducers/cart/get-sum'
 
-const Cart = ({cart, fullPrice}) => cart.visible && (
+const Cart = ({cart, fullPrice}) => (
   <div>
     <CartTable items={cart.items}/>
     <CheckOutBar price={fullPrice}/>

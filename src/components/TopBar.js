@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import {color} from './theme'
 import CartBar from './cart/CartBar'
-import Cart from './cart/Cart'
 
 export const Container = styled.div `
   position:fixed;
@@ -17,7 +16,6 @@ const TopBar = ({location}) => {
     <Container>
       <div className="container">
         <CartBar location={location}/>
-        <Cart/>
       </div>
     </Container>
   )
