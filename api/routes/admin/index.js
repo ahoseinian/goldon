@@ -12,6 +12,7 @@ router.get('/', ensureLogin, function(req, res, next) {
 })
 
 router.use('/items', ensureLogin, require('./items'))
+router.use('/purchases', ensureLogin, require('./purchases'))
 router.use('/images', ensureLogin, require('./images'))
 
 router.get('/login', function(req, res, next) {
