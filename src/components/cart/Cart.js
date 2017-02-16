@@ -1,13 +1,15 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import CartTable from '../items/TableList'
-import CheckOutBar from './CheckOutBar'
 import getSum from '../../reducers/cart/get-sum'
+import PriceSum from './PriceSum'
 
 const Cart = ({cart, fullPrice}) => (
   <div>
     <CartTable items={cart.items}/>
-    <CheckOutBar price={fullPrice}/>
+    <div className="container">
+      <PriceSum sum={fullPrice} />
+    </div>
   </div>
 )
 
