@@ -1,4 +1,5 @@
 var Cart = require('../../../models/cart')
+var getSum = require('./get-sum')
 
 module.exports = function(req, res, next) {
   Cart
@@ -6,6 +7,9 @@ module.exports = function(req, res, next) {
     .sort('-id')
     .populate('items.item')
     .exec(function(err, docs) {
-      res.render('purchases/index', {docs});
+      docs = docs.map(x => {
+        return Object.assign(x, {price: getSum(x.items)})
+      });
+      res.render('admin/purchases/index', {docs});
     });
 }

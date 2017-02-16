@@ -1,0 +1,14 @@
+table.table.table-bordered
+  thead
+    tr
+      th نام
+      th آدرس
+      th تلفن
+      th قیمت کل
+  tbody
+    each doc in docs
+      tr
+        td= doc.fullname
+        td= doc.address
+        td= doc.tel
+        td= doc.price.toLocaleString()
