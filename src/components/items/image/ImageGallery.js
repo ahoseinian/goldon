@@ -1,6 +1,9 @@
-import React, {Component} from 'react'
+import React, {Component, PropTypes} from 'react'
 
 class ImageGallery extends Component {
+  static propTypes = {
+    images: PropTypes.array.isRequired
+  }
 
   render() {
     return (

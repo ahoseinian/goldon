@@ -17,7 +17,7 @@ const Signle = ({item, addItemToCart}) => item
     <Wrapper className="container">
       <div className="row">
         <div className="col-sm-4">
-          <ItemImage id={item.images[0]}/>
+          <ItemImage images={item.images}/>
         </div>
         <div className="col-sm-8 mt-2">
           <MainInfo item={item} addItemToCart={addItemToCart}/>
