@@ -1,4 +1,4 @@
-import {ADD_ITEM_TO_CART, REMOVE_FROM_CART} from '../../actions/action-types'
+import {ADD_ITEM_TO_CART, REMOVE_FROM_CART, COMPLETE_CART_ORDER_FULFILLED} from '../../actions/action-types'
 import unionBy from 'lodash.unionby'
 
 const isEqual = (item) => (x) => x.id === item.id
@@ -21,6 +21,8 @@ const items = (state = [], action) => {
       return unionItems(state, action.item)
     case REMOVE_FROM_CART:
       return state.filter((x) => action.item.id !== x.id)
+    case COMPLETE_CART_ORDER_FULFILLED:
+      return []
     default:
       return state
   }
