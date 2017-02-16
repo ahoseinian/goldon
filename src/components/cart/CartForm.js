@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Button} from '../common/Button'
 
-const CartForm = ({submit}) => (
+const CartForm = ({submit, disabled}) => (
   <form onSubmit={submit}>
     <div className="form-group">
       <label htmlFor="fullname">نام کامل:</label>
-      <input id="fullname" type="text" className="form-control" name="fullname" required/>
+      <input
+        id="fullname"
+        type="text"
+        className="form-control"
+        name="fullname"
+        required/>
     </div>
     <div className="form-group">
       <label htmlFor="tel">شماره تلفن:</label>
@@ -13,16 +18,22 @@ const CartForm = ({submit}) => (
     </div>
     <div className="form-group">
       <label htmlFor="address">آدرس:</label>
-      <textarea name="address" id="address" rows="3" className="form-control" required></textarea>
+      <textarea
+        name="address"
+        id="address"
+        rows="3"
+        className="form-control"
+        required></textarea>
     </div>
     <div className="text-left">
-      <Button>ثبت سفارش</Button>
+      <Button disabled={disabled}>ثبت سفارش</Button>
     </div>
   </form>
 );
 
 CartForm.propTypes = {
-  submit: React.PropTypes.func.isRequired
+  submit: PropTypes.func.isRequired,
+  disabled: PropTypes.bool
 };
 
 export default CartForm;

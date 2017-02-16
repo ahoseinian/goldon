@@ -1,17 +1,11 @@
 import React from 'react';
+import SingleRowTable from '../common/SingleRowTable'
 import Price from '../items/Price'
 
 const PriceSum = ({sum}) => (
-  <table className="table table-bordered">
-    <tbody>
-      <tr>
-        <th>مجموع</th>
-        <td>
-          <Price value={sum}/>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <SingleRowTable name="مجموع">
+    <Price value={sum}/>
+  </SingleRowTable>
 );
 
 PriceSum.propTypes = {
