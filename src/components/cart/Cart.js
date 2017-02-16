@@ -6,7 +6,7 @@ import CartTable from '../items/TableList'
 import getSum from '../../reducers/cart/get-sum'
 import PriceSum from './PriceSum'
 import CartForm from './CartForm'
-
+import CartEmpty from './CartEmpty'
 
 const Cart = ({cart, fullPrice, completeCartOrder}) => {
   const handleSubmit = (e) => {
@@ -34,7 +34,9 @@ const Cart = ({cart, fullPrice, completeCartOrder}) => {
 
   return (
     <div>
-      <CartTable items={cart.items}/>
+      {cart.items.length
+        ? <CartTable items={cart.items}/>
+        : <CartEmpty/>}
       <div className="container">
         <PriceSum sum={fullPrice}/>
         <CartForm submit={handleSubmit} disabled={!cart.items.length}/>
