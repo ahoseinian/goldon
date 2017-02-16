@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux'
 import {addItemToCart} from '../../../actions/index'
 import styled from 'styled-components'
-import ItemImage from '../Image'
+import ItemImage from '../image/ImageGallery'
 import findById from '../../../reducers/items/findById'
 import Details from './Details'
 import MainInfo from './MainInfo'

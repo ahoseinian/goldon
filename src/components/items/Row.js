@@ -1,5 +1,5 @@
 import React from 'react'
-import {SmallImage} from './Image'
+import SmallImage from './image/SmallImage'
 import Price from './Price'
 import styled from 'styled-components'
 import {color} from '../theme'

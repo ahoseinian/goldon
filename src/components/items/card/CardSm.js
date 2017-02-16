@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Link} from 'react-router'
 import ItemCard from '../../common/Card'
-import ItemImage from '../Image'
+import ImageGallery from '../image/Image'
 import PriceRow from './PriceRow'
 import Sizes from './Sizes'
 
@@ -19,7 +19,7 @@ const Card = ({item, addItemToCart}) => (
     <ItemCard className="card">
       <div className="row">
         <div className="col-5">
-          <ItemImage id={item.images[0]}/>
+          <ImageGallery images={item.images}/>
         </div>
         <div className="col-7">
           <ItemName>{item.name}</ItemName>
