@@ -27,4 +27,5 @@ a:hover {
 .img-thumbnail {
   padding: .1rem;
   margin: .1rem;
+  cursor: pointer;
 }
