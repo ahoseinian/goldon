@@ -1,14 +1,32 @@
-table.table.table-bordered
-  thead
-    tr
-      th نام
-      th آدرس
-      th تلفن
-      th قیمت کل
-  tbody
-    each doc in docs
-      tr
-        td= doc.fullname
-        td= doc.address
-        td= doc.tel
-        td= doc.price.toLocaleString()
+include ../mixins/thumb
+each doc in docs
+  .card.card-block.my-3
+    table.table.table-bordered
+      thead
+        tr
+          th نام
+          th آدرس
+          th تلفن
+          th قیمت کل
+      tbody
+        tr
+          td= doc.fullname
+          td= doc.address
+          td= doc.tel
+          td= doc.price.toLocaleString()
+    table.table.table-bordered.table-sm
+      thead
+        tr
+          th نام
+          th سایز
+          th قیمت
+          th تعداد
+      tbody
+        each item in doc.items
+          tr
+            td
+              +thumb(item.item.images[0])
+            td= item.item.name
+            td= item.item.size
+            td= item.item.price
+            td= item.quantity
