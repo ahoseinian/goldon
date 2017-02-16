@@ -34,7 +34,7 @@ module.exports = function(req, res, next) {
               function(callback) {
                 image
                   .batch()
-                  .resize(200)
+                  .resize(300)
                   .writeFile(getFilePath(imageModel[0].id, 'thumbs'), callback)
               },
               function(callback) {
