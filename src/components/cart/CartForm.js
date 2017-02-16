@@ -6,6 +6,7 @@ const CartForm = ({submit, disabled}) => (
     <div className="form-group">
       <label htmlFor="fullname">نام کامل:</label>
       <input
+        autoFocus={true}
         id="fullname"
         type="text"
         className="form-control"
