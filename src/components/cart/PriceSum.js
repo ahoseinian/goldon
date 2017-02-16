@@ -2,7 +2,7 @@ import React from 'react';
 import Price from '../items/Price'
 
 const PriceSum = ({sum}) => (
-  <table className="table table-borderd">
+  <table className="table table-bordered">
     <tbody>
       <tr>
         <th>مجموع</th>

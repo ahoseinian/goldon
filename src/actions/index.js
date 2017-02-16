@@ -5,6 +5,7 @@ import {
   ADD_ITEM_TO_CART,
   TOGGLE_CART_VISIBILITY,
   REMOVE_FROM_CART,
+  COMPLETE_CART_ORDER,
   RESET_SEARCH
 } from './action-types'
 
@@ -18,3 +19,9 @@ export const addItemToCart = (item) => ({type: ADD_ITEM_TO_CART, item})
 export const toggleCartVisibility = () => ({type: TOGGLE_CART_VISIBILITY})
 export const removeFromCart = (item) => ({type: REMOVE_FROM_CART, item})
 export const resetSearch = () => ({type: RESET_SEARCH})
+export const completeCartOrder = (data) => ({
+  type: COMPLETE_CART_ORDER,
+  payload: request
+    .post('/api/cart')
+    .send(data)
+})

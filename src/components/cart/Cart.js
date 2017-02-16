@@ -1,11 +1,12 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {completeCartOrder} from '../../actions'
 import CartTable from '../items/TableList'
 import getSum from '../../reducers/cart/get-sum'
 import PriceSum from './PriceSum'
 import CartForm from './CartForm'
 
-const Cart = ({cart, fullPrice}) => {
+const Cart = ({cart, fullPrice, completeCartOrder}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const {
@@ -16,9 +17,9 @@ const Cart = ({cart, fullPrice}) => {
         }
       }
     } = e;
-    this
-      .props
-      .completeOrder(tel.value, address.value)
+    completeCartOrder({tel: tel.value, address: address.value}).then(() => {
+      console.log('done')
+    })
   }
 
   return (
@@ -35,4 +36,4 @@ const Cart = ({cart, fullPrice}) => {
 export default connect((state) => ({
   cart: state.cart,
   fullPrice: getSum(state.cart.items)
-}))(Cart)
+}), {completeCartOrder})(Cart)
