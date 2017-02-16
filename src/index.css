@@ -1,26 +1,30 @@
-body {
-  direction: rtl;
-  font-family: 'BYekan';
-  background: '#f7f8fa';
-}
-
-button {
-  font-family: 'BYekan';
-}
-a:hover{
-  text-decoration: none;
-}
-
 @font-face {
   font-family: 'BYekan';
   src: url('./static/fonts/BYekan.woff') format('woff');
 }
 
-.table th{
+body {
+  direction: rtl;
+  background: '#f7f8fa';
+}
+
+body, button, input, optgroup, select, textarea {
+  font-family: 'BYekan'
+}
+
+input[type="number"] {
+  direction: ltr;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.table th {
   text-align: right;
 }
 
-.img-thumbnail{
+.img-thumbnail {
   padding: .1rem;
   margin: .1rem;
 }
