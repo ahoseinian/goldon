@@ -5,15 +5,17 @@ var async = require('async')
 
 router.get('/', function(req, res, next) {
   Item
-    .find().sort('hidden').exec(function(err, items) {
+    .find()
+    .sort('hidden')
+    .exec(function(err, items) {
       if (err)
         return next(err)
       res.render('admin/item/index', {items, models})
     })
 })
 
-router.get('/new', function(req, res, next){
-  res.render('admin/item/new', { models})
+router.get('/new', function(req, res, next) {
+  res.render('admin/item/new', {models})
 })
 
 router.post('/', function(req, res, next) {
