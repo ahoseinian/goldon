@@ -13,4 +13,5 @@ export const Button = styled.button `
 export const PrimaryButton = styled(Button)`
   background: ${color.dark}
   color: ${color.white};
+  padding: .6rem 1.2rem;
 `

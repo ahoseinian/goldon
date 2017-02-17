@@ -5,6 +5,6 @@ import Icon from '../common/Icon'
 
 export default() => (
   <Link to="/search">
-    <PrimaryButton><Icon name="filter"/> <small>جستجو</small> </PrimaryButton>
+    <PrimaryButton><Icon name="filter"/> <span>جستجو</span> </PrimaryButton>
   </Link>
 )
