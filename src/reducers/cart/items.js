@@ -15,17 +15,27 @@ const unionItems = (items, newItem) => {
   return unionBy([changedItem], items, 'id')
 }
 
-const items = (state = [], action) => {
+const defaultState = localStorage.getItem("cartItems")
+  ? JSON.parse(localStorage.getItem("cartItems"))
+  : [];
+
+const items = (state = defaultState, action) => {
+  let newItems
   switch (action.type) {
     case ADD_ITEM_TO_CART:
-      return unionItems(state, action.item)
+      newItems = unionItems(state, action.item);
+      break;
     case REMOVE_FROM_CART:
-      return state.filter((x) => action.item.id !== x.id)
+      newItems = state.filter((x) => action.item.id !== x.id);
+      break;
     case COMPLETE_CART_ORDER_FULFILLED:
-      return []
+      newItems = [];
+      break;
     default:
-      return state
+      newItems = state;
   }
+  localStorage.setItem("cartItems", JSON.stringify(newItems))
+  return newItems
 }
 
 export default items
