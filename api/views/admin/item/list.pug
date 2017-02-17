@@ -1,21 +1,20 @@
-.card.card-block.mt-2.p-2
-  table.table.table-bordered
-    tr
-      th Name
-      th images
-      th Edit
-    each item in items
-      tr(class=item.hidden? 'bg-muted text-muted':'')
-        td
-          p= item.name
-          p= item.size
-          p= item.price
-          p= models.find(x => x.value === item.model ).label
-        td.small
-          a.btn.btn-primary(href='/admin/items/'+item.id+'/images') +
-          each img in item.images
-            div.card
-              +thumb(img, 50)
-              a.btn.btn-sm(href="/admin/images/"+img+"/remove") remove
-        td
-          a.btn.btn-sm(href="/admin/items/"+item.id+'/remove') فعال / غیر فعال
+table.table.table-bordered
+  tr
+    th Name
+    th images
+    th Edit
+  each item in items
+    tr(class=item.hidden? 'bg-muted text-muted':'')
+      td
+        p= item.name
+        p= item.size
+        p= item.price
+        p= models.find(x => x.value === item.model ).label
+      td.small
+        a.btn.btn-primary(href='/admin/items/'+item.id+'/images') +
+        each img in item.images
+          div.card
+            +thumb(img, 50)
+            a.btn.btn-sm(href="/admin/images/"+img+"/remove") remove
+      td
+        a.btn.btn-sm(href="/admin/items/"+item.id+'/remove') فعال / غیر فعال
