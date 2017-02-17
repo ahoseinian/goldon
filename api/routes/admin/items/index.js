@@ -22,7 +22,7 @@ router.get('/:id/edit', function(req, res, next) {
   Item
     .findById(req.params.id)
     .exec(function(err, item) {
-      res.render('admin/item/new', {item})
+      res.render('admin/item/new', {item, models})
     })
 })
 

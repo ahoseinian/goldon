@@ -11,10 +11,16 @@ table.table.table-bordered
         p= item.price
         p= models.find(x => x.value === item.model ).label
       td.small
-        a.btn.btn-primary(href='/admin/items/'+item.id+'/images') +عکس
-        each img in item.images
-          div.card
-            +thumb(img, 50)
-            a.btn.btn-sm(href="/admin/images/"+img+"/remove") remove
+        .row.mt-2
+          .col-4.col-md-2
+            a.btn.btn-primary(href='/admin/items/'+item.id+'/images') +عکس
+          each img in item.images
+            .col-4.col-md-2
+              div
+                +thumb(img, 50)
+              a.btn.btn-sm(href="/admin/images/"+img+"/remove") remove
       td
-        a.btn.btn-sm(href="/admin/items/"+item.id+'/remove') فعال / غیر فعال
+        div
+          a.btn.btn-sm.btn-secondary(href="/admin/items/"+item.id+'/remove') فعال / غیر فعال
+        div
+          a.btn.btn-sm.btn-secondary(href="/admin/items/"+item.id+"/edit") ویرایش
