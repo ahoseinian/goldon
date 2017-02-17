@@ -3,6 +3,12 @@ var Item = require('../../../models/item')
 var models = require('../../../models/models')
 var async = require('async')
 
+const goToList = (res) => (next) => (err) => {
+  if(err)
+    return next(err)
+  res.redirect('/admin/items')
+}
+
 router.get('/', function(req, res, next) {
   Item
     .find()
@@ -28,11 +34,17 @@ router.get('/:id/edit', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   var item = new Item(req.body);
-  item.save(function(err, item) {
-    if (err)
-      return next(err);
-    res.redirect('/admin/items')
-  })
+  item.save(goToList(res)(next))
+})
+
+router.post('/:id', function(req, res, next) {
+  Item
+    .findById(req.params.id, function(err, item) {
+      if (err)
+        return next(err);
+      item = Object.assign(item, req.body);
+      item.save(goToList(res)(next))
+    })
 })
 
 router.get('/:id/images', function(req, res, next) {

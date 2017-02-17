@@ -7,9 +7,7 @@
     else
       h3 محصول جدید
   .card-block
-    form.row(method="post" action="/admin/items")
-      if(item)
-        input(type="hidden", name="_id", value=item._id)
+    form.row(method="post" action=(item ? "/admin/items/"+item._id : "/admin/items"))
       .form-group.col-md-4
         label نام محصول
         input.form-control(name="name", value=(item? item.name:false))
@@ -35,11 +33,11 @@
 
       .form-group.col-6
         label اطلاعات
-        textarea.form-control(name="info", value=(item ? item.size.info:false))
+        textarea.form-control(name="info")= item ? item.info : null
 
       .form-group.col-6
         label نگهداری
-        textarea.form-control(name="maintenance", value=(item ? item.size.maintenance:false))
+        textarea.form-control(name="maintenance")= item ? item.maintenance : null
 
       .form-group.col-12.text-left
         if item
