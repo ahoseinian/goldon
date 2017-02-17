@@ -12,7 +12,7 @@ class Cart extends Component {
         <Link to="/cart">
           <PrimaryButton>
             <Icon name="cart-arrow-down"/>
-            <span className="mx-1">سبد</span>
+            <span>سبد</span>
             <u className="mx-1">{itemsCount}</u>
           </PrimaryButton>
         </Link>
