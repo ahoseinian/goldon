@@ -1,39 +1,48 @@
 .card.mt-2
   .card-header
-    h3 محصول جدید
+    if item
+      h3
+        span ویرایش
+        span.text-muted= item.name
+    else
+      h3 محصول جدید
   .card-block
     form.row(method="post" action="/admin/items")
+      if(item)
+        input(type="hidden", name="_id", value=item._id)
       .form-group.col-md-4
         label نام محصول
-        input.form-control(name="name")
+        input.form-control(name="name", value=(item? item.name:false))
       .form-group.col-md-4
         label قیمت به تومان
-        input.form-control(name="price", type="number")
+        input.form-control(name="price", type="number", value=(item? item.price:false))
       .form-group.col-md-4
         label مدل
         select.form-control(name="model")
           each model in models
-            option(value=model.value)= model.label
+            option(value=model.value, selected=(item? item.model:false))= model.label
       .col-12
         .form-group.row
           .col-4
             label طول
-            input.form-control(name="size[tool]", type="number", step="0.1")
+            input.form-control(name="size[tool]", type="number", step="0.1", value=(item ? item.size.tool:false))
           .col-4
             label عرض
-            input.form-control(name="size[arz]", type="number", step="0.1")
+            input.form-control(name="size[arz]", type="number", step="0.1", value=(item ? item.size.arz:false))
           .col-4
             label ارتفاع
-            input.form-control(name="size[ertefa]", type="number", step="0.1")
+            input.form-control(name="size[ertefa]", type="number", step="0.1", value=(item ? item.size.ertefa:false))
 
       .form-group.col-6
         label اطلاعات
-        textarea.form-control(name="info")
+        textarea.form-control(name="info", value=(item ? item.size.info:false))
 
       .form-group.col-6
         label نگهداری
-        textarea.form-control(name="maintenance")
-
+        textarea.form-control(name="maintenance", value=(item ? item.size.maintenance:false))
 
       .form-group.col-12.text-left
-        button.btn.btn-primary(type="submit") افزودن محصول
+        if item
+          button.btn.btn-primary(type="submit") ویرایش محصول
+        else
+          button.btn.btn-primary(type="submit") افزودن محصول
