@@ -15,6 +15,7 @@ const unionItems = (items, newItem) => {
   return unionBy([changedItem], items, 'id')
 }
 
+//TODO refactor here
 const defaultState = localStorage.getItem("cartItems")
   ? JSON.parse(localStorage.getItem("cartItems"))
   : [];
