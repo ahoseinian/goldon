@@ -11,7 +11,7 @@ table.table.table-bordered
         p= item.price
         p= models.find(x => x.value === item.model ).label
       td.small
-        a.btn.btn-primary(href='/admin/items/'+item.id+'/images') +
+        a.btn.btn-primary(href='/admin/items/'+item.id+'/images') +عکس
         each img in item.images
           div.card
             +thumb(img, 50)
