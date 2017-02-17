@@ -6,12 +6,11 @@ export const Button = styled.button `
   color: ${color.dark};
   background: ${color.white};
   border: 1px solid ${color.normal};
-  padding: .1rem .5rem;
+  padding: .6rem 1.2rem;
   border-radius: .2rem;
 `
 
 export const PrimaryButton = styled(Button)`
   background: ${color.dark}
   color: ${color.white};
-  padding: .6rem 1.2rem;
 `
