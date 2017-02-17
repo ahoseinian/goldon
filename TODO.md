@@ -5,6 +5,6 @@
 - [ ] Delivery Info
 - [ ] Similar Items
 - [ ] Change admin font
-- [ ] fix admin login form
+- [x] fix admin login form
 - [x] add item edit functionality
 - [x] Product Info and Maintenance Field
