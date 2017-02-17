@@ -4,7 +4,7 @@
 - [ ] Today Special Item
 - [ ] Delivery Info
 - [ ] Similar Items
-- [ ] Change admin font
+- [x] Change admin font
 - [x] fix admin login form
 - [x] add item edit functionality
 - [x] Product Info and Maintenance Field
