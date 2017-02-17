@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Button} from '../common/Button'
+import Icon from '../common/Icon'
 
 const CartForm = ({submit, disabled}) => (
   <form onSubmit={submit}>
@@ -26,7 +27,12 @@ const CartForm = ({submit, disabled}) => (
         required></textarea>
     </div>
     <div className="text-left">
-      <Button disabled={disabled}>ثبت سفارش</Button>
+      <Button disabled={disabled} className="btn-lg">
+        <Icon name="check"/>
+        <span className="mx-2">
+          ثبت سفارش
+        </span>
+      </Button>
     </div>
   </form>
 );
