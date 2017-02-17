@@ -4,9 +4,10 @@ import {browserHistory} from 'react-router'
 import {completeCartOrder} from '../../actions'
 import CartTable from '../items/TableList'
 import getSum from '../../reducers/cart/get-sum'
-import PriceSum from './PriceSum'
+import Price from '../items/Price'
 import CartForm from './CartForm'
 import CartEmpty from './CartEmpty'
+import SingleRowTable from '../common/SingleRowTable'
 
 const Cart = ({cart, fullPrice, completeCartOrder}) => {
   const handleSubmit = (e) => {
@@ -34,13 +35,17 @@ const Cart = ({cart, fullPrice, completeCartOrder}) => {
 
   return (
     <div>
+      <h1 className="text-center py-3 my-3">سبد خرید</h1>
       {cart.items.length
-        ? <CartTable items={cart.items}/>
+        ? <div className="container">
+            <CartTable items={cart.items}/>
+            <SingleRowTable name="مجموع">
+              <Price value={fullPrice}/>
+            </SingleRowTable>
+            <CartForm submit={handleSubmit} disabled={!cart.items.length}/>
+          </div>
         : <CartEmpty/>}
-      <div className="container">
-        <PriceSum sum={fullPrice}/>
-        <CartForm submit={handleSubmit} disabled={!cart.items.length}/>
-      </div>
+
     </div>
   )
 }
