@@ -4,4 +4,4 @@
 - [ ] Today Special Item
 - [ ] Delivery Info
 - [ ] Similar Items
-- [ ] Product Info and Maintenance Field
+- [x] Product Info and Maintenance Field
