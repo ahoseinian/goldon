@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Cm = styled.small `
+const Small = styled.small `
   font-size: 0.6rem;
 `
 
@@ -12,11 +12,11 @@ const Sizes = ({size}) => (
     </div>
     <div>
       <span>{size.tool}</span>
-      <small>*</small>
+      <Small> - </Small>
       <span>{size.arz}</span>
-      <small>*</small>
+      <Small> - </Small>
       <span>{size.ertefa}</span>
-      <Cm className="mr-1">سانتی متر</Cm>
+      <Small className="mr-1">سانتی متر</Small>
     </div>
   </div>
 )
