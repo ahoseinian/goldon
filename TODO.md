@@ -5,7 +5,7 @@
 - [ ] Delivery Info
 - [ ] Similar Items
 - [ ] favicon / title
-- [ ] cart title and style change
+- [x] cart title and style change
 - [x] Change admin font
 - [x] fix admin login form
 - [x] add item edit functionality
