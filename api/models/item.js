@@ -9,6 +9,8 @@ var ItemSchema = mongoose.Schema({
     ertefa: Number
   },
   price: Number,
+  info: String,
+  maintenance: String,
   hidden: {
     type: Boolean,
     default: false
