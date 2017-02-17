@@ -1,17 +1,22 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Cm = styled.small `
+  font-size: 0.6rem;
+`
 
 const Sizes = ({size}) => (
   <div className="d-flex justify-content-between pt-1 pl-3">
     <div>
-      <small className="ml-2">سایز:</small>
+      سایز:
     </div>
     <div>
-      <small>{size.tool}</small>
+      <span>{size.tool}</span>
       <small>*</small>
-      <small>{size.arz}</small>
+      <span>{size.arz}</span>
       <small>*</small>
-      <small>{size.ertefa}</small>
-      <small className="mr-1">سانتی متر</small>
+      <span>{size.ertefa}</span>
+      <Cm className="mr-1">سانتی متر</Cm>
     </div>
   </div>
 )
