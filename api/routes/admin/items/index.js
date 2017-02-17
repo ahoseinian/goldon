@@ -18,6 +18,14 @@ router.get('/new', function(req, res, next) {
   res.render('admin/item/new', {models})
 })
 
+router.get('/:id/edit', function(req, res, next) {
+  Item
+    .findById(req.params.id)
+    .exec(function(err, item) {
+      res.render('admin/item/new', {item})
+    })
+})
+
 router.post('/', function(req, res, next) {
   var item = new Item(req.body);
   item.save(function(err, item) {
