@@ -1,14 +1,20 @@
 import React from 'react';
 import Row from './Row'
+import SingleRowTable from '../../../common/SingleRowTable'
 
 const Details = ({item}) => (
-  <table className="table table-bordered mt-3">
-    <tbody>
-      <Row name="طول" value={item.size.tool}  measure="سانتی متر"/>
-      <Row name="عرض" value={item.size.arz}  measure="سانتی متر"/>
-      <Row name="ارتفاع" value={item.size.ertefa}  measure="سانتی متر"/>
-    </tbody>
-  </table>
+  <div>
+
+    <table className="table table-bordered mt-3">
+      <tbody>
+        <Row name="طول" value={item.size.tool} measure="سانتی متر"/>
+        <Row name="عرض" value={item.size.arz} measure="سانتی متر"/>
+        <Row name="ارتفاع" value={item.size.ertefa} measure="سانتی متر"/>
+      </tbody>
+    </table>
+    <SingleRowTable name="اطلاعات">{item.info}</SingleRowTable>
+    <SingleRowTable name="نگهداری">{item.maintenance}</SingleRowTable>
+  </div>
 );
 
 Details.propTypes = {
