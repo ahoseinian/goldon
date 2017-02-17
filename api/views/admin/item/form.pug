@@ -1,33 +1,39 @@
 .card.mt-2
   .card-header
-    h3 new item
+    h3 محصول جدید
   .card-block
-    form.mt-3(method="post" action="/admin/items")
-      .form-group
-        input.form-control(name="name", placeholder="name")
-      .form-group
-        input.form-control(name="price", type="number", placeholder="price")
-      .form-group
+    form.row(method="post" action="/admin/items")
+      .form-group.col-md-4
+        label نام محصول
+        input.form-control(name="name")
+      .form-group.col-md-4
+        label قیمت به تومان
+        input.form-control(name="price", type="number")
+      .form-group.col-md-4
+        label مدل
         select.form-control(name="model")
           each model in models
             option(value=model.value)= model.label
-      .form-group.row
-        .col-4
-          input.form-control(name="size[tool]", type="number", step="0.1", placeholder="tool")
-        .col-4
-          input.form-control(name="size[arz]", type="number", step="0.1", placeholder="arz")
-        .col-4
-          input.form-control(name="size[ertefa]", type="number", step="0.1", placeholder="ertefa")
+      .col-12
+        .form-group.row
+          .col-4
+            label طول
+            input.form-control(name="size[tool]", type="number", step="0.1")
+          .col-4
+            label عرض
+            input.form-control(name="size[arz]", type="number", step="0.1")
+          .col-4
+            label ارتفاع
+            input.form-control(name="size[ertefa]", type="number", step="0.1")
 
-      .form-group
+      .form-group.col-6
         label اطلاعات
         textarea.form-control(name="info")
 
-      .form-group
+      .form-group.col-6
         label نگهداری
         textarea.form-control(name="maintenance")
 
 
-      .form-group
-        button.btn.btn-primary(type="submit") Add
-        button.btn.btn-secondary(type="reset") Reset
+      .form-group.col-12.text-left
+        button.btn.btn-primary(type="submit") افزودن محصول
