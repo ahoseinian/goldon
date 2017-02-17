@@ -5,7 +5,7 @@ const SingleRowTable = ({name, children}) => children
     <table className="table table-bordered">
       <tbody>
         <tr>
-          <th>{name}</th>
+          <th width="120">{name}</th>
           <td>
             {children}
           </td>
