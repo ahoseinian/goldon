@@ -6,5 +6,5 @@
 - [ ] Similar Items
 - [ ] Change admin font
 - [ ] fix admin login form
-- [ ] add item edit functionality
+- [x] add item edit functionality
 - [x] Product Info and Maintenance Field
