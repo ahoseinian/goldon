@@ -7,8 +7,8 @@
 - [ ] favicon / title
 - [ ] Banner only in main page
 - [ ] remove rounded borders
-- [ ] show filters with an animation on filter icon
 - [ ] add diameter to sizes
+- [x] show filters with an animation on filter icon
 - [x] cart title and style change
 - [x] Change admin font
 - [x] fix admin login form
