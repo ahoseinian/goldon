@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import {color} from '../../theme'
 
 const Container = styled.div`
-  background: ${color.light};
   padding: 1.5rem;
+  color: ${color.black};
 `
 
 const Currency = styled.small`
