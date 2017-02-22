@@ -3,7 +3,7 @@
 - [ ] Social buttons
 - [ ] Today Special Item
 - [ ] Delivery Info
-- [ ] Similar Items
+- [x] Similar Items
 - [x] favicon / title
 - [x] Banner only in main page
 - [x] remove rounded borders
