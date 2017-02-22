@@ -4,7 +4,7 @@
 - [ ] Today Special Item
 - [ ] Delivery Info
 - [ ] Similar Items
-- [ ] favicon / title
+- [x] favicon / title
 - [x] Banner only in main page
 - [x] remove rounded borders
 - [x] add diameter to sizes
