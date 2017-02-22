@@ -8,7 +8,10 @@ var ItemSchema = mongoose.Schema({
     arz: Number,
     ertefa: Number
   },
-  price: Number,
+  price: {
+    type: Number,
+    default: 0
+  },
   info: String,
   maintenance: String,
   hidden: {
