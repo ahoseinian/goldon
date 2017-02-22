@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import styled from 'styled-components'
 import ItemImage from '../image/ImageGallery'
 import findById from '../../../reducers/items/findById'
+import similarItems from '../../../reducers/items/similarItems'
 import Details from './Details'
 import MainInfo from './MainInfo'
 
@@ -11,7 +12,7 @@ const Wrapper = styled.div `
   margin-bottom: 1rem;
 `
 
-const Signle = ({item, addItemToCart}) => item
+const Signle = ({item, addItemToCart, similarItems}) => item
   ? (
     <Wrapper className="container">
       <div className="row">
@@ -24,7 +25,7 @@ const Signle = ({item, addItemToCart}) => item
       </div>
       <div className="row">
         <div className="col-12">
-          <Details item={item} />
+          <Details item={item}/>
         </div>
       </div>
     </Wrapper>
@@ -38,5 +39,6 @@ Signle.propTypes = {
 };
 
 export default connect((state, {params}) => ({
-  item: findById(state.items, params.id)
+  item: findById(state.items, params.id),
+  similarItems: similarItems(state.items, params.id)
 }))(Signle);
