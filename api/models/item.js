@@ -6,7 +6,8 @@ var ItemSchema = mongoose.Schema({
   size: {
     tool: Number,
     arz: Number,
-    ertefa: Number
+    ertefa: Number,
+    ghotr: Number,
   },
   price: {
     type: Number,
