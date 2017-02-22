@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PageHead from './components/PageHead'
 import TopBar from './components/TopBar'
 import Footer from './components/footer/Footer'
 import styled from 'styled-components'
@@ -13,12 +12,8 @@ class App extends Component {
     const {children, location} = this.props
     return (
       <AppContainer>
-        <TopBar location={location}/>
-        <PageHead/>
-        <div>
-          {children}
-        </div>
-        <Footer />
+        <TopBar location={location}/> {children}
+        <Footer/>
       </AppContainer>
     );
   }
