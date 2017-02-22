@@ -10,6 +10,7 @@ const Details = ({item}) => (
         <Row name="طول" value={item.size.tool} measure="سانتی متر"/>
         <Row name="عرض" value={item.size.arz} measure="سانتی متر"/>
         <Row name="ارتفاع" value={item.size.ertefa} measure="سانتی متر"/>
+        <Row name="قطر" value={item.size.ghotr} measure="سانتی متر"/>
       </tbody>
     </table>
     <SingleRowTable name="اطلاعات">{item.info}</SingleRowTable>
