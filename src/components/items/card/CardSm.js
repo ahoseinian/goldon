@@ -4,7 +4,7 @@ import {Link} from 'react-router'
 import ItemCard from '../../common/Card'
 import ItemImage from '../image/Image'
 import PriceRow from './PriceRow'
-import Sizes from './Sizes'
+// import Sizes from './Sizes'
 
 const ItemName = styled.div `
   text-align:center;
@@ -24,7 +24,7 @@ const Card = ({item, addItemToCart}) => (
         <div className="col-7">
           <ItemName>{item.name}</ItemName>
           <PriceRow price={item.price} />
-          <Sizes size={item.size} />
+          {/* <Sizes size={item.size} /> */}
         </div>
       </div>
     </ItemCard>
