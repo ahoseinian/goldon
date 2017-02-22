@@ -3,6 +3,10 @@
   src: url('./static/fonts/BYekan.woff') format('woff');
 }
 
+html {
+  font-size: 14px;
+}
+
 body {
   direction: rtl;
   background: '#f7f8fa';
