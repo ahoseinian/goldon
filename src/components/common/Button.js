@@ -7,7 +7,7 @@ export const Button = styled.button `
   background: ${color.white};
   border: 1px solid ${color.normal};
   padding: .6rem 1.2rem;
-  border-radius: .2rem;
+  border-radius: 0;
 `
 
 export const PrimaryButton = styled(Button)`
