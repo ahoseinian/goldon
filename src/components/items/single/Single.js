@@ -6,6 +6,7 @@ import findById from '../../../reducers/items/findById'
 import similarItems from '../../../reducers/items/similarItems'
 import Details from './Details'
 import MainInfo from './MainInfo'
+import List from '../list'
 
 const Wrapper = styled.div `
   margin-top: 1rem;
@@ -26,6 +27,10 @@ const Signle = ({item, addItemToCart, similarItems}) => item
       <div className="row">
         <div className="col-12">
           <Details item={item}/>
+        </div>
+        <div className="col-12 mt-3">
+          <h3 className="text-muted text-center">محصولات مشابه</h3>
+          <List items={similarItems} />
         </div>
       </div>
     </Wrapper>
