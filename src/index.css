@@ -12,6 +12,10 @@ body, button, input, optgroup, select, textarea {
   font-family: 'BYekan'
 }
 
+.form-control, .Select-control {
+  border-radius: 0 !important;
+}
+
 input[type="number"] {
   direction: ltr;
 }
