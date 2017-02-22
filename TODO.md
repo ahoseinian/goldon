@@ -5,7 +5,7 @@
 - [ ] Delivery Info
 - [ ] Similar Items
 - [ ] favicon / title
-- [ ] Banner only in main page
+- [x] Banner only in main page
 - [x] remove rounded borders
 - [x] add diameter to sizes
 - [x] show filters with an animation on filter icon
