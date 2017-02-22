@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import {color} from './theme'
 import CartBar from './cart/CartBar'
 import Card from './common/Card'
 
