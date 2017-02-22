@@ -24,6 +24,12 @@ class Single extends React.Component {
     window.scrollTo(0, 0)
   }
 
+  componentWillReceiveProps(nextProps){
+    if(this.props.params !== nextProps.params){
+      window.scrollTo(0, 0)
+    }
+  }
+
   render() {
     const {item, similarItems} = this.props
     return item
