@@ -5,12 +5,12 @@ export const Button = styled.button `
   cursor: pointer;
   color: ${color.dark};
   background: ${color.white};
-  border: 1px solid ${color.normal};
+  border: none; 
   padding: .6rem 1.2rem;
   border-radius: 0;
 `
 
 export const PrimaryButton = styled(Button)`
-  background: ${color.dark}
+  background: ${color.light}
   color: ${color.white};
 `

@@ -6,8 +6,9 @@ import CartBar from './cart/CartBar'
 export const Container = styled.div `
   position:fixed;
   top:0;
-  background: ${color.normal};
+  background: #fff;
   color: ${color.white};
+  box-shadow: 0 0 3px 1px ${color.dark};
   z-index: 3;
   width: 100%;
 `
