@@ -13,37 +13,50 @@ const Wrapper = styled.div `
   margin-bottom: 1rem;
 `
 
-const Signle = ({item, addItemToCart, similarItems}) => item
-  ? (
-    <Wrapper className="container">
-      <div className="row">
-        <div className="col-sm-4">
-          <ItemImage images={item.images}/>
-        </div>
-        <div className="col-sm-8 mt-2">
-          <MainInfo item={item}/>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-12">
-          <Details item={item}/>
-        </div>
-        <div className="col-12 mt-3">
-          <h3 className="text-muted text-center">محصولات مشابه</h3>
-          <List items={similarItems} />
-        </div>
-      </div>
-    </Wrapper>
-  )
-  : null
+class Single extends React.Component {
+  static propTypes = {
+    params: React
+      .PropTypes
+      .shape({id: React.PropTypes.string.isRequired})
+  }
 
-Signle.propTypes = {
-  params: React
-    .PropTypes
-    .shape({id: React.PropTypes.string.isRequired})
-};
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
+  componentDidUpdate() {
+    window.scrollTo(0, 0)
+  }
+
+  render() {
+    const {item, similarItems} = this.props
+    return item
+      ? (
+        <Wrapper className="container">
+          <div className="row">
+            <div className="col-sm-4">
+              <ItemImage images={item.images}/>
+            </div>
+            <div className="col-sm-8 mt-2">
+              <MainInfo item={item}/>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <Details item={item}/>
+            </div>
+            <div className="col-12 mt-3">
+              <h3 className="text-muted text-center">محصولات مشابه</h3>
+              <List items={similarItems}/>
+            </div>
+          </div>
+        </Wrapper>
+      )
+      : null
+  }
+}
 
 export default connect((state, {params}) => ({
   item: findById(state.items, params.id),
   similarItems: similarItems(state.items, params.id)
-}))(Signle);
+}))(Single);
