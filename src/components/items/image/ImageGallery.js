@@ -14,6 +14,10 @@ class ImageGallery extends Component {
   imageClicked(current){
     this.setState({current});
   }
+  
+  componentWillReceiveProps(nextProps){
+    this.setState({current: nextProps.images[0]})
+  }
 
   render() {
     const {images} = this.props;
