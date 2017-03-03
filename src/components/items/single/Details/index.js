@@ -15,7 +15,6 @@ const Details = ({item}) => (
     </table>
 
     <SingleRowTable name="رنگهای موجود">{item.colors.join(' , ')}</SingleRowTable>
-    <SingleRowTable name="اطلاعات">{item.info}</SingleRowTable>
     <SingleRowTable name="نگهداری">{item.maintenance}</SingleRowTable>
   </div>
 );
