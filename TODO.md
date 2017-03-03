@@ -2,7 +2,7 @@
 
 - [ ] Change model to m2m style
 - [ ] add Code
-- [ ] add Color
+- [x] add Color
 - [ ] Analytic
 - [ ] Social buttons
 - [ ] Today Special Item
