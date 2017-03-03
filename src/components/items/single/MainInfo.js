@@ -14,6 +14,10 @@ const ItemName = styled.h1 `
 const MainInfo = ({item}) => (
   <div>
     <ItemName>{item.name}</ItemName>
+    <span className="text-muted">
+      <span>کد محصول:</span>
+      <span>{item.code}</span>
+    </span>
     <div className="row">
       <div className="col-sm-7 mt-1">
         <Price amount={item.price}/>
