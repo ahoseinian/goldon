@@ -3,6 +3,7 @@ var mongoose = require('mongoose')
 var ItemSchema = mongoose.Schema({
   name: String,
   model: Number,
+  code: String,
   size: {
     tool: Number,
     arz: Number,

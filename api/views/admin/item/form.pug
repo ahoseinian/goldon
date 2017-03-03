@@ -9,6 +9,9 @@
   .card-block
     form.row(method="post" action=(item ? "/admin/items/"+item._id : "/admin/items"))
       .form-group.col-md-4
+        label کد محصول
+        input.form-control(name="code", value=(item? item.code:false))
+      .form-group.col-md-4
         label نام محصول
         input.form-control(name="name", value=(item? item.name:false))
       .form-group.col-md-4
@@ -20,7 +23,8 @@
           each model in models
             option(value=model.value, selected=(item? item.model:false))= model.label
       .col-12
-        .form-group.row
+        hr
+        .form-group.row.my-3
           .col-4
             label طول
             input.form-control(name="size[tool]", type="number", step="0.1", value=(item ? item.size.tool:false))
@@ -34,13 +38,18 @@
             label قطر
             input.form-control(name="size[ghotr]", type="number", step="0.1", value=(item ? item.size.ghotr:false))
 
-      .col-12
+      .col-12.form-group
+        hr
+        h4 رنگها
         each color in colors
           label.custom-control.custom-checkbox
             input.custom-control-input(type="checkbox", name="colors[]" value=color, checked=(item && item.colors.includes(color)))
             span.custom-control-description= color
             span.custom-control-indicator
 
+    .row
+      .col-12
+        hr
       .form-group.col-6
         label اطلاعات
         textarea.form-control(name="info")= item ? item.info : null
