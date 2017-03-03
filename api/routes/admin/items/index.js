@@ -1,6 +1,7 @@
 var router = require('express').Router()
 var Item = require('../../../models/item')
 var models = require('../../../models/models')
+var colors = require('../../../models/color')
 var async = require('async')
 
 const goToList = (res) => (next) => (err) => {
@@ -21,14 +22,14 @@ router.get('/', function(req, res, next) {
 })
 
 router.get('/new', function(req, res, next) {
-  res.render('admin/item/new', {models})
+  res.render('admin/item/new', {models, colors})
 })
 
 router.get('/:id/edit', function(req, res, next) {
   Item
     .findById(req.params.id)
     .exec(function(err, item) {
-      res.render('admin/item/new', {item, models})
+      res.render('admin/item/new', {item, models, colors})
     })
 })
 

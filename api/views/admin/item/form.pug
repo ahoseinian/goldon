@@ -13,7 +13,7 @@
         input.form-control(name="name", value=(item? item.name:false))
       .form-group.col-md-4
         label قیمت به تومان
-        input.form-control(name="price", type="number", value=(item? item.price:false))
+        input.form-control(name="price", type="number", value=(item? item.price:false), required)
       .form-group.col-md-4
         label مدل
         select.form-control(name="model")
@@ -34,6 +34,12 @@
             label قطر
             input.form-control(name="size[ghotr]", type="number", step="0.1", value=(item ? item.size.ghotr:false))
 
+      .col-12
+        each color in colors
+          label.custom-control.custom-checkbox
+            input.custom-control-input(type="checkbox", name="colors[]" value=color)
+            span.custom-control-description= color
+            span.custom-control-indicator
 
       .form-group.col-6
         label اطلاعات
