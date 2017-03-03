@@ -1,4 +1,8 @@
 # TODO
+
+- [ ] Change model to m2m style
+- [ ] add Code
+- [ ] add Color
 - [ ] Analytic
 - [ ] Social buttons
 - [ ] Today Special Item
