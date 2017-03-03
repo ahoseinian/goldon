@@ -13,6 +13,8 @@ const Details = ({item}) => (
         <Row name="قطر" value={item.size.ghotr} measure="سانتی متر"/>
       </tbody>
     </table>
+
+    <SingleRowTable name="رنگهای موجود">{item.colors.join(' , ')}</SingleRowTable>
     <SingleRowTable name="اطلاعات">{item.info}</SingleRowTable>
     <SingleRowTable name="نگهداری">{item.maintenance}</SingleRowTable>
   </div>
