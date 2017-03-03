@@ -34,13 +34,13 @@ module.exports = function(req, res, next) {
               function(callback) {
                 image
                   .batch()
-                  .resize(300)
+                  .cover(300, 300)
                   .writeFile(getFilePath(imageModel[0].id, 'thumbs'), callback)
               },
               function(callback) {
                 image
                   .batch()
-                  .resize(50)
+                  .cover(50, 50)
                   .writeFile(getFilePath(imageModel[0].id, '50'), callback)
               }
             ], cb);
