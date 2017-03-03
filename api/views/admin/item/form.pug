@@ -37,7 +37,7 @@
       .col-12
         each color in colors
           label.custom-control.custom-checkbox
-            input.custom-control-input(type="checkbox", name="colors[]" value=color)
+            input.custom-control-input(type="checkbox", name="colors[]" value=color, checked=(item && item.colors.includes(color)))
             span.custom-control-description= color
             span.custom-control-indicator
 
