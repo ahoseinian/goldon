@@ -14,7 +14,6 @@ var ItemSchema = mongoose.Schema({
     type: Number,
     default: 0
   },
-  info: String,
   maintenance: String,
   hidden: {
     type: Boolean,
