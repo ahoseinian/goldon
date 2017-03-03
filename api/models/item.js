@@ -19,6 +19,7 @@ var ItemSchema = mongoose.Schema({
     type: Boolean,
     default: false
   },
+  colors: [String],
   images: [
     {
       type: mongoose.Schema.Types.ObjectId,
