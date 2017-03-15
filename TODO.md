@@ -4,7 +4,7 @@
 - [x] add Code
 - [x] add Color
 - [x] Analytic
-- [ ] Social buttons
+- [x] Social buttons
 - [ ] Today Special Item
 - [ ] Delivery Info
 - [x] Similar Items
