@@ -3,7 +3,7 @@
 - [ ] Change model to m2m style
 - [x] add Code
 - [x] add Color
-- [ ] Analytic
+- [x] Analytic
 - [ ] Social buttons
 - [ ] Today Special Item
 - [ ] Delivery Info
