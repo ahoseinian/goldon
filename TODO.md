@@ -1,7 +1,7 @@
 # TODO
 
 - [ ] Change model to m2m style
-- [ ] add Code
+- [x] add Code
 - [x] add Color
 - [ ] Analytic
 - [ ] Social buttons
