@@ -19,10 +19,16 @@
           label قیمت به تومان
           input.form-control(name="price", type="number", value=(item? item.price:false), required)
         .form-group.col-md-4
-          label مدل
-          select.form-control(name="model")
-            each model in models
-              option(value=model.value, selected=(item? item.model:false))= model.label
+          each model in models
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type="checkbox", name='models[]' value=model.value, checked=(item &&  item.models.includes(model.value)))
+              span.custom-control-description= model.label
+              span.custom-control-indicator
+
+
+          //- select.form-control(name="model")
+          //-   each model in models
+          //-     option(value=model.value, selected=(item? item.model:false))= model.label
         .col-12
           hr
           .form-group.row.my-3

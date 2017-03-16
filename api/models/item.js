@@ -1,14 +1,19 @@
 var mongoose = require('mongoose')
+var shortid = require('shortid')
 
 var ItemSchema = mongoose.Schema({
+  _id: {
+    type: String,
+    'default': shortid.generate
+  },
   name: String,
-  model: Number,
   code: String,
+  models: [Number],
   size: {
     tool: Number,
     arz: Number,
     ertefa: Number,
-    ghotr: Number,
+    ghotr: Number
   },
   price: {
     type: Number,
