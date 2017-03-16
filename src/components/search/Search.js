@@ -19,13 +19,9 @@ class Search extends Component {
           <form onSubmit={this
             .handleSubmit
             .bind(this)}>
-            <Select
-              className="form-group"
-              name="form-field-name"
-              placeholder="مدل محصول"
-              value={search.model}
-              options={models}
-              onChange={setSearchValue.bind(null, 'model')}/>
+            <div className="form-group">
+              <Checkboxes items={models} />
+            </div>
             <FormButtons handleReset={resetSearch}/>
           </form>
         </Card>
@@ -33,5 +29,17 @@ class Search extends Component {
     )
   }
 }
+
+const Checkboxes = ({items}) => (
+  <div>
+    {items.map( item => (
+      <label className="custom-control custom-checkbox">
+        <input type="checkbox" className="custom-control-input" />
+        <span className="custom-control-indicator"></span>
+        <span className="custom-control-description">{item.label}</span>
+      </label>
+    ))}
+  </div>
+)
 
 export default connect((state) => ({search: state.search}), ({setSearchValue, resetSearch}))(Search)

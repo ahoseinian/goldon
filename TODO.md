@@ -1,5 +1,5 @@
 # TODO
-
+- [ ] Fix Search functionality
 - [ ] Change model to m2m style
 - [x] add Code
 - [x] add Color
