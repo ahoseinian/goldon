@@ -3,7 +3,7 @@ import React from 'react';
 const SingleRow = ({name, value, measure}) => value
   ? (
     <tr>
-      <th>{name}</th>
+      <th width="120">{name}</th>
       <td>{value} {measure}</td>
     </tr>
   )

@@ -1,12 +1,12 @@
 # TODO
 - [ ] Fix Search functionality
+- [ ] Today Special Item
+- [ ] Delivery Info
 - [x] Change model to m2m style
 - [x] add Code
 - [x] add Color
 - [x] Analytic
 - [x] Social buttons
-- [ ] Today Special Item
-- [ ] Delivery Info
 - [x] Similar Items
 - [x] favicon / title
 - [x] Banner only in main page
