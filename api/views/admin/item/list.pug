@@ -9,7 +9,7 @@ table.table.table-bordered
         p= item.name
         p= item.size
         p= item.price
-        p= item.models.map(x => models.find(z => z.value === x).label ).join(' , ')
+        p= item.modelsNames.join(' , ')
       td.small
         .row.mt-2
           .col-4.col-md-2
