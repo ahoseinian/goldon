@@ -1,5 +1,6 @@
 var mongoose = require('mongoose')
 var shortid = require('shortid')
+var models = require('./models')
 
 var ItemSchema = mongoose.Schema({
   _id: {
@@ -32,5 +33,9 @@ var ItemSchema = mongoose.Schema({
     }
   ]
 }).set('toJSON', {virtuals: true})
+
+ItemSchema.virtual('modelsNames').get(function () {
+  return this.models.map(x => models.find(z => z.value === x).label);
+});
 
 module.exports = mongoose.model('Item', ItemSchema)

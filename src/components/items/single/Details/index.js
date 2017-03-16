@@ -14,6 +14,7 @@ const Details = ({item}) => (
       </tbody>
     </table>
 
+    <SingleRowTable name="مدل">{item.models.map(x => x.label).join(' , ')}</SingleRowTable>
     <SingleRowTable name="رنگهای موجود">{item.colors.join(' , ')}</SingleRowTable>
     <SingleRowTable name="نگهداری">{item.maintenance}</SingleRowTable>
   </div>
