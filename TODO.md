@@ -3,10 +3,10 @@
 - [ ] Today Special Item
 - [ ] Landing Image
 - [ ] Automatic pagination
-- [ ] Priceless Items for information
 - [ ] Commenting section
 - [ ] User login Oauth
 - [ ] Social urls change
+- [x] Priceless Items for information
 - [x] Delivery Info
 - [x] Change model to m2m style
 - [x] add Code
