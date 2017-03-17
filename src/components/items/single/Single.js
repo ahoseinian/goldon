@@ -9,7 +9,7 @@ import MainInfo from './MainInfo'
 import List from '../list'
 
 const Wrapper = styled.div `
-  margin-top: 1rem;
+  margin-top: 4.5rem;
   margin-bottom: 1rem;
 `
 
