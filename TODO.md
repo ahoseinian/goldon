@@ -6,6 +6,7 @@
 - [ ] Commenting section
 - [ ] User login Oauth
 - [ ] Social urls change
+- [ ] Fix lwip to crop with whitespace
 - [x] Priceless Items for informationaj
 - [x] Delivery Info
 - [x] Change model to m2m style
