@@ -7,6 +7,9 @@
 - [ ] User login Oauth
 - [ ] Social urls change
 - [ ] Fix lwip to crop with whitespace
+- [ ] Add other Names
+- [ ] Add wiki link
+- [ ] Add Khavas
 - [x] Priceless Items for informationaj
 - [x] Delivery Info
 - [x] Change model to m2m style
