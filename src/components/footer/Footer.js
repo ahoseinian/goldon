@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {color} from '../theme'
 import Social from '../Contact/Social'
+import Delivery from './Delivery'
 
 const Wrapper = styled.div `
   margin-top: 2rem;
@@ -14,7 +15,10 @@ const CopyRight = styled.div `
 const Footer = () => (
   <Wrapper className="container">
     <div className="row">
-      <div className="col-12 d-flex justify-content-between mb-3">
+      <div className="col-md-8">
+        <Delivery />
+      </div>
+      <div className="col-md-4 d-flex justify-content-between align-items-center mb-3">
         <Social/>
         <CopyRight> © میاریم</CopyRight>
       </div>
