@@ -1,7 +1,7 @@
 # TODO
 - [ ] Fix Search functionality
 - [ ] Today Special Item
-- [ ] Delivery Info
+- [x] Delivery Info
 - [x] Change model to m2m style
 - [x] add Code
 - [x] add Color
