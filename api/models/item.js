@@ -21,6 +21,7 @@ var ItemSchema = mongoose.Schema({
     default: 0
   },
   maintenance: String,
+  information: String,
   hidden: {
     type: Boolean,
     default: false

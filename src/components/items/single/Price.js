@@ -2,26 +2,28 @@ import React from 'react';
 import styled from 'styled-components'
 import {color} from '../../theme'
 
-const Container = styled.div`
+const Container = styled.div `
   padding: 1.5rem;
   color: ${color.black};
 `
 
-const Currency = styled.small`
+const Currency = styled.small `
   position: relative;
   top: 0.4rem;
   margin-right: 1rem;
 `
 
-const Price = ({amount}) => (
-  <Container className="d-flex justify-content-center h4 m-0 h-100">
-    <div className="price">{amount.toLocaleString()}</div>
-    <Currency>تومان</Currency>
-  </Container>
-);
+const Price = ({amount}) => amount
+  ? (
+    <Container className="d-flex justify-content-center h4 m-0 h-100">
+      <div className="price">{amount.toLocaleString()}</div>
+      <Currency>تومان</Currency>
+    </Container>
+  )
+  : null;
 
 Price.propTypes = {
-  amount: React.PropTypes.number.isRequired
+  amount: React.PropTypes.number
 };
 
 export default Price;

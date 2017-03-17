@@ -17,7 +17,7 @@
           input.form-control(name="name", value=(item? item.name:false))
         .form-group.col-md-4
           label قیمت به تومان
-          input.form-control(name="price", type="number", value=(item? item.price:false), required)
+          input.form-control(name="price", type="number", value=(item? item.price:false))
         .form-group.col-md-4
           each model in models
             label.custom-control.custom-checkbox
@@ -58,9 +58,13 @@
         .col-12
           hr
 
-        .form-group.col-md-6
+        .form-group.col-12
           label نگهداری
           textarea.form-control(name="maintenance", rows="6")= item ? item.maintenance : null
+
+        .form-group.col-12
+          label توضیحات
+          textarea.form-control(name="information", rows="6")= item ? item.information : null
 
         .form-group.col-12.text-left
           if item

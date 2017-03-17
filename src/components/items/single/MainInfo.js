@@ -14,23 +14,31 @@ const ItemName = styled.h1 `
 const MainInfo = ({item}) => (
   <div>
     <ItemName>{item.name}</ItemName>
-    <span className="text-muted">
-      <span>کد محصول:</span>
-      <span>{item.code}</span>
-    </span>
-    <div className="row">
-      <div className="col-sm-7 mt-1">
-        <Price amount={item.price}/>
-      </div>
-      <div className="col-sm-5 mt-1">
-        <PurchaseButton item={item} />
-      </div>
-    </div>
+    <CodeAndPrice item={item}/>
   </div>
 );
 
 MainInfo.propTypes = {
-  item: React.PropTypes.object.isRequired,
+  item: React.PropTypes.object.isRequired
 };
+
+const CodeAndPrice = ({item}) => item.price
+  ? (
+    <div>
+      <span className="text-muted">
+        <span>کد محصول:</span>
+        <span>{item.code}</span>
+      </span>
+      <div className="row">
+        <div className="col-sm-7 mt-1">
+          <Price amount={item.price}/>
+        </div>
+        <div className="col-sm-5 mt-1">
+          <PurchaseButton item={item}/>
+        </div>
+      </div>
+    </div>
+  )
+  : null
 
 export default MainInfo;
