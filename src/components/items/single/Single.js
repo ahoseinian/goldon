@@ -7,6 +7,7 @@ import similarItems from '../../../reducers/items/similarItems'
 import Details from './Details'
 import MainInfo from './MainInfo'
 import List from '../list'
+import SimpleCard from '../../common/card/SimpleCard'
 
 const Wrapper = styled.div `
   margin-top: 4.5rem;
@@ -44,17 +45,22 @@ class Single extends React.Component {
           <div className="row">
             <div className="col-12">
               <Details item={item}/>
+              <SimilarItems items={similarItems} />
             </div>
-            {similarItems.length && <div className="col-12 mt-3">
-              <h3 className="text-muted text-center">محصولات مشابه</h3>
-              <List items={similarItems}/>
-            </div>}
           </div>
         </Wrapper>
       )
       : null
   }
 }
+
+const SimilarItems = ({items}) => items.length
+  ? (
+    <SimpleCard title="محصولات مشابه">
+      <List items={items}/>
+    </SimpleCard>
+  )
+  : null
 
 export default connect((state, {params}) => ({
   item: findById(state.items, params.id),

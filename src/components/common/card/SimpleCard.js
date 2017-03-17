@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import styled from 'styled-components'
 
-const TextParagraph = styled.p`
+const TextParagraph = styled.div `
   white-space: pre-line;
 `
 
@@ -20,7 +20,11 @@ const SimpleCard = ({title, children}) => children
 
 SimpleCard.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element)
+  ])
 };
 
 export default SimpleCard;
