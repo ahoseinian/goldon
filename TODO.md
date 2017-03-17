@@ -1,6 +1,12 @@
 # TODO
 - [ ] Fix Search functionality
 - [ ] Today Special Item
+- [ ] Landing Image
+- [ ] Automatic pagination
+- [ ] Priceless Items for information
+- [ ] Commenting section
+- [ ] User login Oauth
+- [ ] Social urls change
 - [x] Delivery Info
 - [x] Change model to m2m style
 - [x] add Code
