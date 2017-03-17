@@ -6,7 +6,7 @@
 - [ ] Commenting section
 - [ ] User login Oauth
 - [ ] Social urls change
-- [x] Priceless Items for information
+- [x] Priceless Items for informationaj
 - [x] Delivery Info
 - [x] Change model to m2m style
 - [x] add Code
