@@ -15,17 +15,15 @@ const Wrapper = styled.div `
 
 class Single extends React.Component {
   static propTypes = {
-    params: React
-      .PropTypes
-      .shape({id: React.PropTypes.string.isRequired})
+    params: React.PropTypes.shape({id: React.PropTypes.string.isRequired})
   }
 
   componentDidMount() {
     window.scrollTo(0, 0)
   }
 
-  componentWillReceiveProps(nextProps){
-    if(this.props.params !== nextProps.params){
+  componentWillReceiveProps(nextProps) {
+    if (this.props.params !== nextProps.params) {
       window.scrollTo(0, 0)
     }
   }
@@ -47,10 +45,10 @@ class Single extends React.Component {
             <div className="col-12">
               <Details item={item}/>
             </div>
-            <div className="col-12 mt-3">
+            {similarItems.length && <div className="col-12 mt-3">
               <h3 className="text-muted text-center">محصولات مشابه</h3>
               <List items={similarItems}/>
-            </div>
+            </div>}
           </div>
         </Wrapper>
       )

@@ -19,5 +19,9 @@ const Section = ({iconName, children}) => (
     <div>{children}</div>
   </div>
 )
+Section.propTypes = {
+  iconName: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired
+}
 
 export default Delivery
