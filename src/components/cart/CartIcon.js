@@ -9,7 +9,7 @@ class Cart extends Component {
     const {itemsCount} = this.props
     return itemsCount
       ? (
-        <Link to="/cart">
+        <Link to="/cart" className="my-2">
           <PrimaryButton>
             <Icon name="cart-arrow-down"/>
             <span>سبد</span>

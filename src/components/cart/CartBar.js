@@ -9,7 +9,7 @@ const CartBar = ({location}) => {
     : <HomeLink/>
 
   return (
-    <div className="d-flex justify-content-between py-2">
+    <div className="d-flex justify-content-between">
       {TopLink}
       <CartIcon/>
     </div>

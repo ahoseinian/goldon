@@ -4,7 +4,6 @@ import Footer from './components/footer/Footer'
 import styled from 'styled-components'
 
 const AppContainer = styled.div `
-  padding-top: 4.5rem;
 `
 
 class App extends Component {

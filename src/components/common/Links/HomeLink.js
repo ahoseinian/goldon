@@ -4,7 +4,7 @@ import {PrimaryButton} from '../Button'
 import Icon from '../Icon'
 
 export default() => (
-  <Link to="/">
+  <Link to="/" className="my-2">
     <PrimaryButton>
       <Icon name="home"/>
       <span>خانه</span>

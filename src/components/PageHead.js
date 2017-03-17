@@ -19,7 +19,7 @@ const Title = styled.h1 `
 
 const PageHead = () => (
   <BackDrop className="d-flex justify-content-center align-items-center hidden-xs-down">
-    <Title>میاریم اولین فروشنده ی گل و گیاه آنلاین خوار میانه</Title>
+    <Title> میاریم اجتماع آنلاین دوست داران طبیعت </Title>
   </BackDrop>
 )
 
