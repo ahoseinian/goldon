@@ -7,7 +7,7 @@
 - [ ] User login Oauth
 - [ ] Social urls change
 - [ ] Fix lwip to crop with whitespace
-- [ ] Add other Names
+- [x] Add other Names
 - [x] Add wiki link
 - [x] Add Khavas
 - [x] Priceless Items for informationaj
