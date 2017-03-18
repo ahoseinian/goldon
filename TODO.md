@@ -8,7 +8,7 @@
 - [ ] Social urls change
 - [ ] Fix lwip to crop with whitespace
 - [ ] Add other Names
-- [ ] Add wiki link
+- [x] Add wiki link
 - [x] Add Khavas
 - [x] Priceless Items for informationaj
 - [x] Delivery Info
