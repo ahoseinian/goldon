@@ -66,6 +66,10 @@
           label توضیحات
           textarea.form-control(name="information", rows="6")= item ? item.information : null
 
+        .form-group.col-12
+          label خواص
+          textarea.form-control(name="benefits", rows="6")= item ? item.benefits : null
+
         .form-group.col-12.text-left
           if item
             button.btn.btn-primary(type="submit") ویرایش محصول

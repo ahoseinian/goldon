@@ -9,7 +9,7 @@
 - [ ] Fix lwip to crop with whitespace
 - [ ] Add other Names
 - [ ] Add wiki link
-- [ ] Add Khavas
+- [x] Add Khavas
 - [x] Priceless Items for informationaj
 - [x] Delivery Info
 - [x] Change model to m2m style

@@ -7,7 +7,7 @@ const TextParagraph = styled.div `
 
 const SimpleCard = ({title, children}) => children
   ? (
-    <div className="card my-1">
+    <div className="card my-3">
       <div className="card-header text-center">
         <h5 className="m-2">{title}</h5>
       </div>

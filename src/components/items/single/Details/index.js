@@ -19,6 +19,7 @@ const Details = ({item}) => (
     <SingleRowTable name="رنگهای موجود">{item.colors.join(' , ')}</SingleRowTable>
     <SimpleCard title="نگهداری">{item.maintenance}</SimpleCard>
     <SimpleCard title="توضیحات">{item.information}</SimpleCard>
+    <SimpleCard title="خواص">{item.benefits}</SimpleCard>
   </div>
 );
 
