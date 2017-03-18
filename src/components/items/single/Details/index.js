@@ -18,6 +18,7 @@ const Details = ({item}) => (
 
     <SingleRowTable name="مدل">{item.modelsNames.join(' , ')}</SingleRowTable>
     <SingleRowTable name="رنگهای موجود">{item.colors.join(' , ')}</SingleRowTable>
+    <SingleRowTable name="نام های دیگر">{item.names.join(' , ')}</SingleRowTable>
     <SingleRowTable name="لینک ها">
       <LinkList links={item.links} />
     </SingleRowTable>
