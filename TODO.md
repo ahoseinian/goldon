@@ -10,7 +10,6 @@
 - [ ] Add other Names
 - [ ] Add wiki link
 - [ ] Add Khavas
-- [ ] Add watermark
 - [x] Priceless Items for informationaj
 - [x] Delivery Info
 - [x] Change model to m2m style
