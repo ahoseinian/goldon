@@ -28,6 +28,10 @@ var ItemSchema = mongoose.Schema({
     default: false
   },
   colors: [String],
+  links: [{
+    name: String,
+    url: String,
+  }],
   images: [
     {
       type: mongoose.Schema.Types.ObjectId,
@@ -36,7 +40,7 @@ var ItemSchema = mongoose.Schema({
   ]
 }).set('toJSON', {virtuals: true})
 
-ItemSchema.virtual('modelsNames').get(function () {
+ItemSchema.virtual('modelsNames').get(function() {
   return this.models.map(x => models.find(z => z.value === x).label);
 });
 

@@ -70,6 +70,10 @@
           label خواص
           textarea.form-control(name="benefits", rows="6")= item ? item.benefits : null
 
+        .form-group.col-12.ltr
+          label Wiki
+          input.form-control(name="links[][wiki]", value=(item && item.links.find(x=> x.name==='wiki') ? item.links.find(x=> x.name==='wiki')['url']:false) )
+
         .form-group.col-12.text-left
           if item
             button.btn.btn-primary(type="submit") ویرایش محصول

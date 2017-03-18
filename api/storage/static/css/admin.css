@@ -19,3 +19,7 @@ th {
 .bg-muted{
   background: #ddd;
 }
+
+.ltr{
+  direction: ltr;
+}
