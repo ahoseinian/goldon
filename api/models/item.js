@@ -10,6 +10,7 @@ var ItemSchema = mongoose.Schema({
   name: String,
   code: String,
   models: [Number],
+  names: [String],
   size: {
     tool: Number,
     arz: Number,
@@ -28,10 +29,12 @@ var ItemSchema = mongoose.Schema({
     default: false
   },
   colors: [String],
-  links: [{
-    name: String,
-    url: String,
-  }],
+  links: [
+    {
+      name: String,
+      url: String
+    }
+  ],
   images: [
     {
       type: mongoose.Schema.Types.ObjectId,

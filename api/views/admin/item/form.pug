@@ -74,6 +74,13 @@
           label Wiki
           input.form-control(name="links[][wiki]", value=(item && item.links.find(x=> x.name==='wiki') ? item.links.find(x=> x.name==='wiki')['url']:false) )
 
+        .form-group.col-12
+          h1  نامهای دیگر
+          .d-flex.flex-wrap
+            each name in item.names
+              input.form-control.m-1(name="names[]", value=name, style="width:140px")
+            input.form-control.m-1(name="names[]", style="width:140px")
+
         .form-group.col-12.text-left
           if item
             button.btn.btn-primary(type="submit") ویرایش محصول

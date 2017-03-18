@@ -3,23 +3,9 @@ var Item = require('../../../models/item')
 var models = require('../../../models/models')
 var colors = require('../../../models/color')
 var async = require('async')
+var save = require('./save')
 
-const goToList = (res) => (next) => (err) => {
-  if (err)
-    return next(err)
-  res.redirect('/admin/items')
-}
 
-function extractKeyVal(obj) {
-  const k = Object.keys(obj)[0]
-  const val = obj[k]
-  return {name: k, url: val}
-}
-
-function fixLinks(item) {
-  item.links = item.links.map(extractKeyVal);
-  return item;
-}
 
 router.get('/', function(req, res, next) {
   Item.find().sort('hidden').exec(function(err, items) {
@@ -39,19 +25,8 @@ router.get('/:id/edit', function(req, res, next) {
   })
 })
 
-router.post('/', function(req, res, next) {
-  var item = new Item(fixLinks(req.body));
-  item.save(goToList(res)(next))
-})
-
-router.post('/:id', function(req, res, next) {
-  Item.findById(req.params.id, function(err, item) {
-    if (err)
-      return next(err);
-    item = Object.assign(item, fixLinks(req.body));
-    item.save(goToList(res)(next))
-  })
-})
+router.post('/', save.newItem)
+router.post('/:id', save.edit)
 
 router.get('/:id/images', function(req, res, next) {
   res.render('admin/item/imageform', {id: req.params.id})
