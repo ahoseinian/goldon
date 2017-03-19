@@ -9,10 +9,10 @@ const LinkButton = styled.a`
 
 const list = [
   {
-    url: 'http://t.me/man_O_she',
+    url: 'https://t.me/cactusang',
     label: 'telegram'
   }, {
-    url: 'https://www.instagram.com/man_O_she/',
+    url: 'https://www.instagram.com/cactusang',
     label: 'instagram'
   }
 ]

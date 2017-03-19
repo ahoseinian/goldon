@@ -1,11 +1,11 @@
 # TODO
 - [ ] Fix Search functionality
 - [ ] Today Special Item
-- [ ] Landing Image
 - [ ] Automatic pagination
 - [ ] Commenting section
 - [ ] User login Oauth
-- [ ] Social urls change
+- [ ] Landing Image
+- [x] Social urls change
 - [x] Fix lwip to crop with whitespace
 - [x] Add other Names
 - [x] Add wiki link
