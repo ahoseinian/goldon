@@ -6,7 +6,7 @@
 - [ ] Commenting section
 - [ ] User login Oauth
 - [ ] Social urls change
-- [ ] Fix lwip to crop with whitespace
+- [x] Fix lwip to crop with whitespace
 - [x] Add other Names
 - [x] Add wiki link
 - [x] Add Khavas
