@@ -8,13 +8,14 @@ const goToList = (res) => (next) => (err) => {
 }
 
 function extractKeyVal(obj) {
-  const k = Object.keys(obj)[-1]
+  const k = Object.keys(obj)[0]
   const val = obj[k]
   return {name: k, url: val}
 }
 
 function fixLinks(item) {
   item.links = item.links.map(extractKeyVal);
+  console.log(item.links);
   return item;
 }
 
