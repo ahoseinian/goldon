@@ -5,6 +5,8 @@
 - [ ] Commenting section
 - [ ] User login Oauth
 - [ ] zoom image
+- [ ] random similar items (aghlam moshabe)
+- [ ] card style
 - [x] Landing Image
 - [x] revert back to cover
 - [x] Social urls change
