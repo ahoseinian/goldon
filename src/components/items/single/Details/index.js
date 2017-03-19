@@ -20,7 +20,7 @@ const Details = ({item}) => (
     <SingleRowTable name="رنگهای موجود">{item.colors.join(' , ')}</SingleRowTable>
     <SingleRowTable name="نام های دیگر">{item.names.join(' , ')}</SingleRowTable>
     <SingleRowTable name="لینک ها">
-      <LinkList links={item.links} />
+      {item.links.length && <LinkList links={item.links} />}
     </SingleRowTable>
     <SimpleCard title="نگهداری">{item.maintenance}</SimpleCard>
     <SimpleCard title="توضیحات">{item.information}</SimpleCard>
