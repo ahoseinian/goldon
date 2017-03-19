@@ -6,7 +6,7 @@ import {color} from './theme'
 const BackDrop = styled.div `
   background: url(${headerBg});
   background-size: cover;
-  height: 300px;
+  height: 100vh;
   margin-bottom: 1rem;
 `
 const Title = styled.h1 `
