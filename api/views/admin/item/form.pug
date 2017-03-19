@@ -77,8 +77,9 @@
         .form-group.col-12
           h1  نامهای دیگر
           .d-flex.flex-wrap
-            each name in item.names
-              input.form-control.m-1(name="names[]", value=name, style="width:140px")
+            if item
+              each name in item.names
+                input.form-control.m-1(name="names[]", value=name, style="width:140px")
             input.form-control.m-1(name="names[]", style="width:140px")
 
         .form-group.col-12.text-left
