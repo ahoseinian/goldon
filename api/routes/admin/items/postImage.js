@@ -34,13 +34,13 @@ module.exports = function(req, res, next) {
               function(callback) {
                 image
                   .batch()
-                  .contain(400, 400, 'white')
+                  .cover(400, 400)
                   .writeFile(getFilePath(imageModel[0].id, 'thumbs'), callback)
               },
               function(callback) {
                 image
                   .batch()
-                  .contain(50, 50, 'white')
+                  .cover(50, 50)
                   .writeFile(getFilePath(imageModel[0].id, '50'), callback)
               }
             ], cb);

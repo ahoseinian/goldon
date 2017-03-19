@@ -5,6 +5,7 @@
 - [ ] Commenting section
 - [ ] User login Oauth
 - [ ] Landing Image
+- [x] revert back to cover
 - [x] Social urls change
 - [x] Fix lwip to crop with whitespace
 - [x] Add other Names
