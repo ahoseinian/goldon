@@ -4,8 +4,8 @@
 - [ ] Automatic pagination
 - [ ] Commenting section
 - [ ] User login Oauth
-- [ ] Landing Image
 - [ ] zoom image
+- [x] Landing Image
 - [x] revert back to cover
 - [x] Social urls change
 - [x] Fix lwip to crop with whitespace
