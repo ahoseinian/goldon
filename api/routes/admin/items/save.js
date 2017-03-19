@@ -15,7 +15,7 @@ function extractKeyVal(obj) {
 
 function fixLinks(item) {
   item.links = item.links.map(extractKeyVal);
-  console.log(item.links);
+  item.links = item.links.filter(x => x.url.length)
   return item;
 }
 
