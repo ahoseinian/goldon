@@ -8,6 +8,7 @@ import Icon from './common/Icon'
 const BackDrop = styled.div `
   background: url(${headerBg});
   background-size: cover;
+  background-position: center;
   height: 100vh;
   margin-bottom: 1rem;
 `
