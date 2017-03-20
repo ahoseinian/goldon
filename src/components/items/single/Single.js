@@ -56,7 +56,7 @@ class Single extends React.Component {
 
 const SimilarItems = ({items}) => items.length
   ? (
-    <SimpleCard title="محصولات مشابه">
+    <SimpleCard title="اقلام مشابه">
       <List items={items}/>
     </SimpleCard>
   )
