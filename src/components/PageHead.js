@@ -24,6 +24,7 @@ const ButtomLink = styled.span `
   background: rgba(0, 0, 0, 0.3);
   border-radius: 10rem;
   padding:1rem 1rem 0;
+  cursor: pointer;
 `
 
 const PageHead = () => (
