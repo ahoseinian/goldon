@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Link} from 'react-router'
-import ItemCard from '../../common/Card'
+import ItemCard from '../../common/card/Card'
 import ItemImage from '../image/Image'
 import PriceRow from './PriceRow'
 // import Sizes from './Sizes'

@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import styled from 'styled-components'
+import Card from './Card'
 
 const TextParagraph = styled.div `
   white-space: pre-line;
@@ -7,14 +8,14 @@ const TextParagraph = styled.div `
 
 const SimpleCard = ({title, children}) => children
   ? (
-    <div className="card my-3">
+    <Card className="my-3">
       <div className="card-header text-center">
         <h5 className="m-2">{title}</h5>
       </div>
       <div className="card-block">
         <TextParagraph>{children}</TextParagraph>
       </div>
-    </div>
+    </Card>
   )
   : null
 

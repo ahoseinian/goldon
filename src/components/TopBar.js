@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import CartBar from './cart/CartBar'
-import Card from './common/Card'
+import Card from './common/card/Card'
 
 export const Container = styled.div `
   position:fixed;

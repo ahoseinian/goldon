@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react'
 import Icon from '../common/Icon'
-import Card from '../common/Card'
+import Card from '../common/card/Card'
 
 const Delivery = () => (
   <Card className="card-block mb-3 text-muted">
