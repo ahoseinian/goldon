@@ -1,12 +1,12 @@
 # TODO
+- [ ] Add a second font
 - [ ] Fix Search functionality
 - [ ] Today Special Item
 - [ ] Automatic pagination
 - [ ] Commenting section
 - [ ] User login Oauth
 - [ ] zoom image
-- [ ] random similar items (aghlam moshabe)
-- [ ] Add a second font
+- [x] random similar items (aghlam moshabe)
 - [x] card style
 - [x] Landing Image
 - [x] revert back to cover
