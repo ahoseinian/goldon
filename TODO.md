@@ -6,6 +6,7 @@
 - [ ] Commenting section
 - [ ] User login Oauth
 - [ ] zoom image
+- [ ] structured data
 - [x] random similar items (aghlam moshabe)
 - [x] card style
 - [x] Landing Image
