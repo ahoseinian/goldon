@@ -1,14 +1,15 @@
 import React, {PropTypes} from 'react'
 import Icon from '../common/Icon'
+import Card from '../common/Card'
 
 const Delivery = () => (
-  <div className="card card-block mb-3 text-muted">
+  <Card className="card-block mb-3 text-muted">
     <div className=" d-flex flex-wrap justify-content-between">
       <Section iconName="truck">تحویل اکسپرس</Section>
       <Section iconName="credit-card">پرداخت در محل</Section>
       <Section iconName="dollar">تضمین بهترین قیمت</Section>
     </div>
-  </div>
+  </Card>
 )
 
 const Section = ({iconName, children}) => (
