@@ -40,7 +40,11 @@ var ItemSchema = mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Image'
     }
-  ]
+  ],
+  date: {
+    type: Date,
+    default: Date.now
+  }
 }).set('toJSON', {virtuals: true})
 
 ItemSchema.virtual('modelsNames').get(function() {

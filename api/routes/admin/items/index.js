@@ -8,7 +8,7 @@ var save = require('./save')
 
 
 router.get('/', function(req, res, next) {
-  Item.find().sort('hidden').exec(function(err, items) {
+  Item.find().sort('-date').exec(function(err, items) {
     if (err)
       return next(err)
     res.render('admin/item/index', {items, models})
