@@ -22,26 +22,20 @@ const ButtomLink = styled.span `
   font-size: 3rem;
   color: ${color.white};
   background: rgba(0, 0, 0, 0.3);
-  position:relative;
-  top: 10rem;
   border-radius: 10rem;
-  padding:2rem 1rem 1rem;
+  padding:1rem 1rem 0;
 `
 
 const PageHead = () => (
-  <BackDrop className="d-flex justify-content-center align-items-center ">
-    <div className="text-center">
-      <Title>
-        میاریم اجتماع آنلاین دوست داران طبیعت
-      </Title>
-
-      <ButtomLink>
-
-        <Link to="firstInsideContainer" smooth={true}>
-          <Icon name="chevron-down"/>
-        </Link>
-      </ButtomLink>
-    </div>
+  <BackDrop className="d-flex flex-column justify-content-around align-items-center ">
+    <Title>
+      میاریم اجتماع آنلاین دوست داران طبیعت
+    </Title>
+    <ButtomLink>
+      <Link to="firstInsideContainer" smooth={true}>
+        <Icon name="chevron-down"/>
+      </Link>
+    </ButtomLink>
   </BackDrop>
 )
 
