@@ -1,8 +1,7 @@
 import React from 'react';
 import Row from './Row'
-import SingleRowTable from '../../../common/SingleRowTable'
 import SimpleCard from '../../../common/card/SimpleCard'
-import LinkList from '../../../common/Links/LinkList'
+import DetailsList from './DetailsList'
 
 const Details = ({item}) => (
   <div>
@@ -16,12 +15,7 @@ const Details = ({item}) => (
       </tbody>
     </table>
 
-    <SingleRowTable name="مدل">{item.modelsNames.join(' , ')}</SingleRowTable>
-    <SingleRowTable name="رنگهای موجود">{item.colors.join(' , ')}</SingleRowTable>
-    <SingleRowTable name="نام های دیگر">{item.names.join(' , ')}</SingleRowTable>
-    <SingleRowTable name="لینک ها">
-      {item.links.length && <LinkList links={item.links} />}
-    </SingleRowTable>
+    <DetailsList item={item}/>
     <SimpleCard title="نگهداری">{item.maintenance}</SimpleCard>
     <SimpleCard title="توضیحات">{item.information}</SimpleCard>
     <SimpleCard title="خواص">{item.benefits}</SimpleCard>
