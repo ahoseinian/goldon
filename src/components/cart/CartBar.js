@@ -3,18 +3,13 @@ import CartIcon from './CartIcon'
 // import SearchButton from '../search/SearchButton'
 import HomeLink from '../common/Links/HomeLink'
 
-const CartBar = ({pathname}) => {
-  const TopLink = pathname === '/'
-    ? null
-    : <HomeLink/>
-
-  return (
+const CartBar = ({pathname}) => (
     <div className="d-flex justify-content-between">
-      {TopLink}
+      {pathname !== '/' && <HomeLink/>}
       <CartIcon/>
     </div>
-  )
-}
+)
+
 
 CartBar.propTypes = {
   pathname: React.PropTypes.string.isRequired

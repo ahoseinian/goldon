@@ -11,15 +11,8 @@ describe('TopBar', () => {
 
   describe('location prop', function() {
 
-    it('should exists', () => {
-      const wrapper = shallow(<TopBar />)
-      expect(
-        console.error.called
-      ).toEqual(true)
-    })
-
     it('should be string', () => {
-      const wrapper = shallow(<TopBar location='string' />)
+      const wrapper = shallow(<TopBar pathname='string' />)
       expect(
         console.error.called
       ).toEqual(false)

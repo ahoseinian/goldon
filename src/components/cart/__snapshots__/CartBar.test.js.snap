@@ -1,0 +1,14 @@
+exports[`CartBar does not render HomeLink on home 1`] = `
+<div
+  className="d-flex justify-content-between">
+  <Connect(Cart) />
+</div>
+`;
+
+exports[`CartBar does renders HomeLink on othe pathes 1`] = `
+<div
+  className="d-flex justify-content-between">
+  <Component />
+  <Connect(Cart) />
+</div>
+`;
