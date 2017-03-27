@@ -50,6 +50,14 @@ const Cart = ({cart, fullPrice, completeCartOrder}) => {
   )
 }
 
+Cart.propTypes = {
+  cart: React.PropTypes.shape({
+    items: React.PropTypes.arrayOf(
+      React.PropTypes.object
+    )
+  }).isRequired
+}
+
 export default connect((state) => ({
   cart: state.cart,
   fullPrice: getSum(state.cart.items)

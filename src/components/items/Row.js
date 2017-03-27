@@ -4,8 +4,6 @@ import Price from './Price'
 import styled from 'styled-components'
 import {color} from '../theme'
 import Icon from '../common/Icon'
-import {connect} from 'react-redux'
-import {removeFromCart} from '../../actions'
 
 const Td = styled.td `
   vertical-align: middle !important;
@@ -31,10 +29,10 @@ const Row = ({item, removeFromCart}) => (
       </div>
       <Price value={item.price * item.quantity}/>
     </Td>
-    <Td className="text-center" onClick={removeFromCart.bind(null, item)}>
+    <Td className="text-center" onClick={() => item.removeFromCart()}>
       <Icon name="times" />
     </Td>
   </tr>
 )
 
-export default connect(null, {removeFromCart})(Row)
+export default Row
