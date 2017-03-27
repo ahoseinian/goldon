@@ -4,7 +4,10 @@
   "private": true,
   "proxy": "http://localhost:4000",
   "devDependencies": {
-    "react-scripts": "0.8.5"
+    "enzyme": "^2.8.0",
+    "react-addons-test-utils": "^15.4.2",
+    "react-scripts": "0.9.5",
+    "sinon": "^2.1.0"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",

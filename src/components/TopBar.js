@@ -22,4 +22,10 @@ const TopBar = ({location}) => {
   )
 }
 
+TopBar.propTypes = {
+  location: React.PropTypes.shape({
+    pathname: React.PropTypes.string.isRequired
+  }).isRequired
+}
+
 export default TopBar
