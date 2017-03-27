@@ -5,8 +5,8 @@ import CartBar from './cart/CartBar'
 
 describe('TopBar', () => {
   it('shows CartBar with location', () => {
-    const wrapper = shallow(<TopBar location={{pathname:'test'}} />)
-    expect(wrapper.contains(<CartBar location={{pathname:'test'}} />)).toEqual(true)
+    const wrapper = shallow(<TopBar pathname="test" />)
+    expect(wrapper.contains(<CartBar pathname="test" />)).toEqual(true)
   })
 
   describe('location prop', function() {
@@ -18,22 +18,15 @@ describe('TopBar', () => {
       ).toEqual(true)
     })
 
-    it('should be object', () => {
+    it('should be string', () => {
       const wrapper = shallow(<TopBar location='string' />)
       expect(
         console.error.called
-      ).toEqual(true)
-    })
-
-    it('should have pathname', () => {
-      const wrapper = shallow(<TopBar location={{}} />)
-      expect(
-        console.error.called
-      ).toEqual(true)
+      ).toEqual(false)
     })
 
     it('should works fine with correct location prop', () => {
-      const wrapper = shallow(<TopBar location={{pathname:'test'}} />)
+      const wrapper = shallow(<TopBar pathname="test" />)
       expect(
         console.error.called
       ).toEqual(false)

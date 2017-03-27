@@ -30,4 +30,5 @@ describe('Cart', () => {
     ).toJSON()
     expect(wrapper).toMatchSnapshot()
   })
+
 })

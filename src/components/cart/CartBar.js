@@ -3,8 +3,8 @@ import CartIcon from './CartIcon'
 // import SearchButton from '../search/SearchButton'
 import HomeLink from '../common/Links/HomeLink'
 
-const CartBar = ({location}) => {
-  const TopLink = location.pathname === '/'
+const CartBar = ({pathname}) => {
+  const TopLink = pathname === '/'
     ? null
     : <HomeLink/>
 
@@ -14,6 +14,10 @@ const CartBar = ({location}) => {
       <CartIcon/>
     </div>
   )
+}
+
+CartBar.propTypes = {
+  pathname: React.PropTypes.string.isRequired
 }
 
 export default CartBar

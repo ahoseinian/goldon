@@ -53,8 +53,8 @@ exports[`Cart renders items when it has items 1`] = `
             <td
               className="hzPrvk">
               <img
+                alt={undefined}
                 className="img-thumbnail"
-                role="presentation"
                 src="/images/50/undefined.jpg"
                 width="60" />
             </td>

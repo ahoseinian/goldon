@@ -10,12 +10,12 @@ export const Container = styled.div `
   z-index: 3;
   width: 100%;
 `
-const TopBar = ({location}) => {
+const TopBar = ({pathname}) => {
   return (
     <Container>
       <Card>
         <div className="container">
-          <CartBar location={location}/>
+          <CartBar pathname={pathname}/>
         </div>
       </Card>
     </Container>
@@ -23,9 +23,7 @@ const TopBar = ({location}) => {
 }
 
 TopBar.propTypes = {
-  location: React.PropTypes.shape({
-    pathname: React.PropTypes.string.isRequired
-  }).isRequired
+  pathname: React.PropTypes.string.isRequired
 }
 
 export default TopBar
