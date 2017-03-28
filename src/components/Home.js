@@ -1,24 +1,25 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {connect} from 'react-redux'
 import {getSearchedItems} from '../reducers/search'
 import ItemList from './items/list'
 import PageHead from './PageHead'
 import {Element} from 'react-scroll'
 
-class Home extends Component {
-  render() {
-    const {items} = this.props
-    return (
-      <div >
-        <PageHead/>
-        <div className="container" >
-          <Element name="firstInsideContainer">
-            <ItemList items={items} />
-          </Element>
-        </div>
-      </div>
-    );
-  }
+const Home = ({items}) => (
+  <div>
+    <PageHead/>
+    <div className="container">
+      <Element name="firstInsideContainer">
+        <ItemList items={items}/>
+      </Element>
+    </div>
+  </div>
+)
+
+Home.propTypes = {
+  items: React.PropTypes.arrayOf(
+    React.PropTypes.object
+  ).isRequired
 }
 
 export default connect((state) => ({
