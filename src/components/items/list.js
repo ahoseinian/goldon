@@ -6,7 +6,7 @@ const List = ({items}) => {
   return <div className="row">{itemList}</div>
 }
 List.propTypes = {
-  items: PropTypes.array.isRequired
+  items: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
 export default List
