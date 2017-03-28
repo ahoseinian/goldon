@@ -1,4 +1,5 @@
 import React from 'react'
+import Icon from '../common/Icon'
 
 const DeliverySection = ({iconName, children}) => (
   <div className="text-center">
