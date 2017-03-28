@@ -1,0 +1,19 @@
+exports[`Footer renders 1`] = `
+<styled.div
+  className="container">
+  <div
+    className="row">
+    <div
+      className="col-md-8">
+      <Delivery />
+    </div>
+    <div
+      className="col-md-4 d-flex justify-content-between align-items-center mb-3">
+      <Social />
+      <styled.div>
+         © میاریم
+      </styled.div>
+    </div>
+  </div>
+</styled.div>
+`;
