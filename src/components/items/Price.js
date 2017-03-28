@@ -8,4 +8,8 @@ const Price = ({value}) => (
   </div>
 )
 
+Price.propTypes = {
+  value: React.PropTypes.number.isRequired
+}
+
 export default Price
