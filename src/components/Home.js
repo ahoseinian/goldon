@@ -5,7 +5,7 @@ import ItemList from './items/list'
 import PageHead from './PageHead'
 import {Element} from 'react-scroll'
 
-const Home = ({items}) => (
+export const Home = ({items}) => (
   <div>
     <PageHead/>
     <div className="container">
@@ -21,6 +21,7 @@ Home.propTypes = {
     React.PropTypes.object
   ).isRequired
 }
+
 
 export default connect((state) => ({
   items: getSearchedItems(state.items, state.search)

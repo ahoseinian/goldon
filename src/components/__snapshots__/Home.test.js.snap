@@ -1,70 +1,38 @@
 exports[`Home renders 1`] = `
-<Home
-  dispatch={[Function]}
-  items={Array []}
-  store={
-    Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
-  storeSubscription={
-    Subscription {
-      "listeners": Object {
-        "notify": [Function],
-      },
-      "onStateChange": [Function],
-      "parentSub": undefined,
-      "store": Object {
-        "dispatch": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-        Symbol(observable): [Function],
-      },
-      "unsubscribe": null,
-    }
-  } />
+<div>
+  <PageHead />
+  <div
+    className="container">
+    <Component
+      name="firstInsideContainer">
+      <List
+        items={Array []} />
+    </Component>
+  </div>
+</div>
 `;
 
 exports[`Home renders items 1`] = `
-<Home
-  dispatch={[Function]}
-  items={
-    Array [
-      Object {
-        "id": 1,
-      },
-      Object {
-        "id": 2,
-      },
-    ]
-  }
-  store={
-    Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
-  storeSubscription={
-    Subscription {
-      "listeners": Object {
-        "notify": [Function],
-      },
-      "onStateChange": [Function],
-      "parentSub": undefined,
-      "store": Object {
-        "dispatch": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-        Symbol(observable): [Function],
-      },
-      "unsubscribe": null,
-    }
-  } />
+<div>
+  <PageHead />
+  <div
+    className="container">
+    <Component
+      name="firstInsideContainer">
+      <List
+        items={
+          Array [
+            Object {
+              "id": 1,
+              "images": Array [],
+            },
+            Object {
+              "id": 2,
+              "images": Array [],
+            },
+          ]
+        } />
+    </Component>
+  </div>
+</div>
 `;
