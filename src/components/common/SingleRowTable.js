@@ -18,7 +18,6 @@ const SingleRowTable = ({name, children}) => children
 SingleRowTable.propTypes = {
   name: PropTypes.string.isRequired,
   children: PropTypes.node
-
 };
 
 export default SingleRowTable;
