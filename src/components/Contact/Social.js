@@ -13,7 +13,7 @@ const list = [
 
 const Social = () => (
   <div className="h2 m-0">
-    {list.map((x, k) => <SocialLink key={k} item={x}/>)}
+    {list.map((item) => <SocialLink key={item.label} {...item}/>)}
   </div>
 )
 

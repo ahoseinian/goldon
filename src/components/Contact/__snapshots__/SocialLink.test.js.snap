@@ -1,0 +1,9 @@
+exports[`SocialLink renders 1`] = `
+<styled.a
+  className="mx-2"
+  href="https://t.me/cactusang"
+  target="blank">
+  <IconSpan
+    name="telegram" />
+</styled.a>
+`;
