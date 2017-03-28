@@ -1,5 +1,4 @@
 import React from 'react'
-import Icon from '../common/Icon'
 import Card from '../common/card/Card'
 import DeliverySection from './DeliverySection'
 
