@@ -13,8 +13,8 @@ const SingleLink = ({name, url}) => name
   : null;
 
 SingleLink.propTypes = {
-  name: React.PropTypes.string,
-  url: React.PropTypes.string
+  name: React.PropTypes.string.isRequired,
+  url: React.PropTypes.string.isRequired
 };
 
 export default SingleLink;
