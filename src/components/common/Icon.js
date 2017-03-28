@@ -1,4 +1,9 @@
 import React from 'react'
 
-const IconSpan = ({name}) => <span className={`fa fa-fw fa-${name}`}></span>
-export default IconSpan
+const Icon = ({name}) => <span className={`fa fa-fw fa-${name}`}></span>
+
+Icon.propTypes = {
+  name: React.PropTypes.string.isRequired
+}
+
+export default Icon

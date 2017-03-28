@@ -3,7 +3,7 @@ exports[`SocialLink renders 1`] = `
   className="mx-2"
   href="https://t.me/cactusang"
   target="blank">
-  <IconSpan
+  <Icon
     name="telegram" />
 </styled.a>
 `;
