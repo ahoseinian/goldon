@@ -1,0 +1,15 @@
+exports[`HomeLink renders 1`] = `
+<Link
+  className="my-2"
+  onlyActiveOnIndex={false}
+  style={Object {}}
+  to="/">
+  <styled.button>
+    <Icon
+      name="home" />
+    <span>
+      خانه
+    </span>
+  </styled.button>
+</Link>
+`;
