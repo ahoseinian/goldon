@@ -1,11 +1,5 @@
 import React from 'react'
-import Icon from '../common/Icon'
-import styled from 'styled-components'
-import {color} from '../theme'
-
-const LinkButton = styled.a`
-  color:${color.dark}
-`
+import SocialLink from './SocialLink'
 
 const list = [
   {
@@ -19,14 +13,8 @@ const list = [
 
 const Social = () => (
   <div className="h2 m-0">
-    {list.map((x, k) => <SocialSingle key={k} item={x}/>)}
+    {list.map((x, k) => <SocialLink key={k} item={x}/>)}
   </div>
-)
-
-const SocialSingle = ({item}) => (
-  <LinkButton href={item.url} target="blank" className="mx-2">
-    <Icon name={item.label}/>
-  </LinkButton>
 )
 
 export default Social
