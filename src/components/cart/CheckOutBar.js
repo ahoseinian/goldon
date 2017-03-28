@@ -9,4 +9,8 @@ const CheckOutBar = ({price}) => (
   </div>
 )
 
+CheckOutBar.propTypes = {
+  price: React.PropTypes.number.isRequired
+}
+
 export default CheckOutBar
