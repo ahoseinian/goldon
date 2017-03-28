@@ -1,0 +1,10 @@
+exports[`LinkList renders links 1`] = `
+<div>
+  <SingleLink
+    _id={1} />
+  <SingleLink
+    _id={2} />
+  <SingleLink
+    _id={3} />
+</div>
+`;
