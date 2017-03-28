@@ -3,7 +3,7 @@ import {Button} from '../common/Button'
 import Icon from '../common/Icon'
 
 const CartForm = ({submit, disabled}) => (
-  <form onSubmit={submit}>
+  <form onSubmit={submit} id="cart-form">
     <div className="form-group">
       <label htmlFor="fullname">نام کامل:</label>
       <input
@@ -27,7 +27,7 @@ const CartForm = ({submit, disabled}) => (
         required></textarea>
     </div>
     <div className="text-left">
-      <Button disabled={disabled} className="btn-lg">
+      <Button disabled={disabled} className="btn-lg cart-form-button">
         <Icon name="check"/>
         <span className="mx-2">
           ثبت سفارش

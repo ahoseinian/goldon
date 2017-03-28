@@ -115,6 +115,7 @@ exports[`Cart renders items when it has items 1`] = `
       </tbody>
     </table>
     <form
+      id="cart-form"
       onSubmit={[Function]}>
       <div
         className="form-group">
@@ -158,7 +159,7 @@ exports[`Cart renders items when it has items 1`] = `
       <div
         className="text-left">
         <button
-          className="btn-lg ejLGtq"
+          className="btn-lg cart-form-button ejLGtq"
           disabled={false}>
           <span
             className="fa fa-fw fa-check" />
