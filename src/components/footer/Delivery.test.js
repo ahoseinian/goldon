@@ -5,6 +5,5 @@ import Delivery from './Delivery'
 describe('Delivery', () => {
   it('renders', () => {
     const wrapper = shallow(<Delivery />)
-
   })
 })
