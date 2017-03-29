@@ -5,20 +5,26 @@ const Small = styled.small `
   font-size: 0.6rem;
 `
 
-const Sizes = ({size}) => (
+const Sizes = ({tool, arz, ertefa}) => (
   <div className="d-flex justify-content-between pt-1 pl-3">
     <div>
       سایز:
     </div>
     <div>
-      <span>{size.tool}</span>
+      <span>{tool}</span>
       <Small> - </Small>
-      <span>{size.arz}</span>
+      <span>{arz}</span>
       <Small> - </Small>
-      <span>{size.ertefa}</span>
+      <span>{ertefa}</span>
       <Small className="mr-1">سانتی متر</Small>
     </div>
   </div>
 )
+
+Sizes.propTypes = {
+  tool: React.PropTypes.string,
+  arz: React.PropTypes.string,
+  ertefa: React.PropTypes.string,
+}
 
 export default Sizes
