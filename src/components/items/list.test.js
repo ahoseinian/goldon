@@ -4,9 +4,9 @@ import List from './list'
 import Card from './card/CardSm'
 
 const items = [
-  {id:1},
-  {id:2},
-  {id:3},
+  {id:'#1', name: 'item1'},
+  {id:'#2', name: 'item2'},
+  {id:'#3', name: 'item3'},
 ]
 
 describe('list', () => {

@@ -12,6 +12,5 @@ const item = {
 describe('CardSm', () => {
   it('renders', () => {
     const wrapper = shallow(<CardSm {...item} />)
-
   })
 })
