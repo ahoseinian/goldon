@@ -14,21 +14,27 @@ const ItemName = styled.div `
   line-height: 1.5rem;
 `
 
-const Card = ({item, addItemToCart}) => (
-  <Link to={`/items/${item.id}/${item.name}`} className="text-muted">
+const Card = ({id, name, images, price}) => (
+  <Link to={`/items/${id}/${name}`} className="text-muted">
     <ItemCard className="card">
       <div className="row">
         <div className="col-5">
-          <ItemImage id={item.images[0]}/>
+          <ItemImage id={images[0]}/>
         </div>
         <div className="col-7">
-          <ItemName>{item.name}</ItemName>
-          <PriceRow price={item.price} />
-          {/* <Sizes size={item.size} /> */}
+          <ItemName>{name}</ItemName>
+          <PriceRow price={price} />
         </div>
       </div>
     </ItemCard>
   </Link>
 )
+
+Card.propTypes = {
+  id: React.PropTypes.string.isRequired,
+  name: React.PropTypes.string.isRequired,
+  images: React.PropTypes.arrayOf(React.PropTypes.string),
+  price: React.PropTypes.number,
+}
 
 export default Card
