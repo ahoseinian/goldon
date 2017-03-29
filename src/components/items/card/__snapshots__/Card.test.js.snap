@@ -2,7 +2,8 @@ exports[`Card renders 1`] = `
 <styled.div
   className="card">
   <styled.div />
-  <ItemImage />
+  <ItemImage
+    id="one" />
   <Component
     handleClick={[Function]}
     price={22} />

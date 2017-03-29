@@ -13,6 +13,6 @@ const item = {
 describe('Card', () => {
   it('renders', () => {
     const wrapper = shallow(<Card item={item} addItemToCart={jest.fn()}/>)
-    expect(toJson(wrapper)).toMatchSnapshot()
+    expect(toJson(wrapper)).toMatchSnapshot() 
   })
 })
