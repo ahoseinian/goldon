@@ -1,8 +1,14 @@
 import React from 'react'
 import Disc from './Disc'
 
-export default({price}) => price ? (
+const PriceRow = ({price}) => price ? (
   <div className="pt-2 pl-3">
     <Disc name="قیمت" value={price.toLocaleString()} measure="تومان"/>
   </div>
 ): null
+
+PriceRow.propTypes = {
+  price: React.PropTypes.number
+}
+
+export default PriceRow
