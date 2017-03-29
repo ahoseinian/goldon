@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
 import {color} from '../../theme'
-import Price from './Price'
-import PurchaseButton from './PurchaseButton'
 import CodeAndPrice from './CodeAndPrice'
 
 const ItemName = styled.h1 `
