@@ -1,0 +1,9 @@
+exports[`PriceRow renders with price 1`] = `
+<div
+  className="pt-2 pl-3">
+  <Disc
+    measure="تومان"
+    name="قیمت"
+    value="123" />
+</div>
+`;
