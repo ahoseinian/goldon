@@ -9,7 +9,7 @@ import CartForm from './CartForm'
 import CartEmpty from './CartEmpty'
 import SingleRowTable from '../common/SingleRowTable'
 
-const Cart = ({cart, fullPrice, completeCartOrder}) => {
+export const Cart = ({cart, fullPrice, completeCartOrder}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const {
@@ -55,7 +55,8 @@ Cart.propTypes = {
     items: React.PropTypes.arrayOf(
       React.PropTypes.object
     )
-  }).isRequired
+  }).isRequired,
+  fullPrice: React.PropTypes.number.isRequired
 }
 
 export default connect((state) => ({
