@@ -1,0 +1,13 @@
+exports[`Disc renders 1`] = `
+<div
+  className="d-flex justify-content-between">
+  <div>
+    name
+    :
+  </div>
+  <div>
+    value
+    <styled.small />
+  </div>
+</div>
+`;

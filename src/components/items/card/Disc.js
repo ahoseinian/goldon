@@ -13,4 +13,10 @@ const Disc = ({name, value, measure}) => (
   </div>
 )
 
+Disc.propTypes = {
+  name: React.PropTypes.string.isRequired,
+  value: React.PropTypes.string.isRequired,
+  measure: React.PropTypes.string
+}
+
 export default Disc
