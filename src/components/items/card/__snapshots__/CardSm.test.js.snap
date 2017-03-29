@@ -1,0 +1,27 @@
+exports[`CardSm renders 1`] = `
+<Link
+  className="text-muted"
+  onlyActiveOnIndex={false}
+  style={Object {}}
+  to="/items/#number1/first item">
+  <styled.div
+    className="card">
+    <div
+      className="row">
+      <div
+        className="col-5">
+        <ItemImage
+          id="one" />
+      </div>
+      <div
+        className="col-7">
+        <styled.div>
+          first item
+        </styled.div>
+        <Component
+          price={22} />
+      </div>
+    </div>
+  </styled.div>
+</Link>
+`;
