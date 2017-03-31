@@ -35,7 +35,7 @@
     "superagent": "^3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start && nodemon --watch api api/bin/www ",
+    "start": "nodemon --watch api api/bin/www & react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
