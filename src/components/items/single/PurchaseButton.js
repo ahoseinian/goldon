@@ -12,19 +12,19 @@ const AddButton = styled(Button)`
   height: 100%;
 `
 
-const PurchaseButton = ({item, addItemToCart, cartItems}) => {
+export const PurchaseButton = ({item, addItemToCart, cartItems}) => {
   const itemInCart = findById(cartItems, item.id)
   return (
     <AddButton className="btn-block" onClick={addItemToCart.bind(null, item)}>
       <Icon name="plus"/>
       <div className="d-inline mr-2">
         {!itemInCart
-          ? <span>
+          ? <span className="buy-text">
               خرید
             </span>
           : <div className="d-inline">
             <span>افزودن تعداد درون سبد به</span>
-            <u className="mr-2">
+            <u className="mr-2 item-quanity-plus">
               {itemInCart.quantity + 1}
             </u>
           </div>}
@@ -34,7 +34,9 @@ const PurchaseButton = ({item, addItemToCart, cartItems}) => {
 }
 
 PurchaseButton.propTypes = {
-  item: PropTypes.object.isRequired,
+  item: PropTypes.shape({
+    id: PropTypes.string.isRequired
+  }).isRequired,
   addItemToCart: PropTypes.func.isRequired,
   cartItems: PropTypes.array.isRequired
 };

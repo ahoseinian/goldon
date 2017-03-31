@@ -16,7 +16,7 @@ exports[`CodeAndPrice renders correctly with price 1`] = `
     </div>
     <div
       className="col-sm-5 mt-1">
-      <Connect(PurchaseButton)
+      <Connect(Component)
         item={
           Object {
             "price": 444,

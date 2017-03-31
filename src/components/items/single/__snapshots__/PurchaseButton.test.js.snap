@@ -1,0 +1,15 @@
+exports[`PurchaseButton shows buy button when item does not exist in cart 1`] = `
+<styled.button
+  className="btn-block"
+  onClick={[Function]}>
+  <Icon
+    name="plus" />
+  <div
+    className="d-inline mr-2">
+    <span
+      className="buy-text">
+      خرید
+    </span>
+  </div>
+</styled.button>
+`;
