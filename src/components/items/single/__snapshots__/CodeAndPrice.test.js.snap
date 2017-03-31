@@ -1,0 +1,28 @@
+exports[`CodeAndPrice renders correctly with price 1`] = `
+<div>
+  <span
+    className="text-muted">
+    <span>
+      کد محصول:
+    </span>
+    <span />
+  </span>
+  <div
+    className="row">
+    <div
+      className="col-sm-7 mt-1">
+      <Price
+        amount={444} />
+    </div>
+    <div
+      className="col-sm-5 mt-1">
+      <Connect(PurchaseButton)
+        item={
+          Object {
+            "price": 444,
+          }
+        } />
+    </div>
+  </div>
+</div>
+`;
