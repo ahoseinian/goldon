@@ -14,9 +14,10 @@ const Wrapper = styled.div `
   margin-bottom: 1rem;
 `
 
-class Single extends React.Component {
+export class Single extends React.Component {
   static propTypes = {
-    params: React.PropTypes.shape({id: React.PropTypes.string.isRequired})
+    params: React.PropTypes.shape({id: React.PropTypes.string.isRequired}),
+    item: React.PropTypes.object.isRequired
   }
 
   componentDidMount() {
@@ -31,36 +32,35 @@ class Single extends React.Component {
 
   render() {
     const {item, similarItems} = this.props
-    return item
-      ? (
-        <Wrapper className="container">
-          <div className="row">
-            <div className="col-sm-4">
-              <ItemImage images={item.images}/>
-            </div>
-            <div className="col-sm-8 mt-2">
-              <MainInfo item={item}/>
-            </div>
+    return (
+      <Wrapper className="container">
+        <div className="row">
+          <div className="col-sm-4">
+            <ItemImage images={item.images}/>
           </div>
-          <div className="row">
-            <div className="col-12">
-              <Details item={item}/>
-              <SimilarItems items={similarItems} />
-            </div>
+          <div className="col-sm-8 mt-2">
+            <MainInfo item={item}/>
           </div>
-        </Wrapper>
-      )
-      : null
+        </div>
+        <div className="row ">
+          <div className="col-12">
+            <Details item={item}/>
+            {
+              similarItems &&
+              <div className="similar-items">
+                <SimpleCard title="اقلام مشابه">
+                  <List items={similarItems}/>
+                </SimpleCard>
+              </div>
+            }
+          </div>
+        </div>
+      </Wrapper>
+    )
   }
 }
 
-const SimilarItems = ({items}) => items.length
-  ? (
-    <SimpleCard title="اقلام مشابه">
-      <List items={items}/>
-    </SimpleCard>
-  )
-  : null
+
 
 export default connect((state, {params}) => ({
   item: findById(state.items, params.id),

@@ -1,0 +1,49 @@
+exports[`Single does not renders similarItems without them 1`] = `
+<styled.div
+  className="container">
+  <div
+    className="row">
+    <div
+      className="col-sm-4">
+      <ImageGallery
+        images={Array []} />
+    </div>
+    <div
+      className="col-sm-8 mt-2">
+      <MainInfo
+        item={
+          Object {
+            "images": Array [],
+          }
+        } />
+    </div>
+  </div>
+  <div
+    className="row ">
+    <div
+      className="col-12">
+      <Details
+        item={
+          Object {
+            "images": Array [],
+          }
+        } />
+    </div>
+  </div>
+</styled.div>
+`;
+
+exports[`Single renders similarItems 1`] = `
+<div
+  className="similar-items">
+  <SimpleCard
+    title="اقلام مشابه">
+    <List
+      items={
+        Array [
+          Object {},
+        ]
+      } />
+  </SimpleCard>
+</div>
+`;
