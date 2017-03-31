@@ -1,0 +1,12 @@
+exports[`Price renders  1`] = `
+<styled.div
+  className="d-flex justify-content-center h4 m-0 h-100">
+  <div
+    className="price">
+    2,000
+  </div>
+  <styled.small>
+    تومان
+  </styled.small>
+</styled.div>
+`;

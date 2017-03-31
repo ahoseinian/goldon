@@ -13,17 +13,15 @@ const Currency = styled.small `
   margin-right: 1rem;
 `
 
-const Price = ({amount}) => amount
-  ? (
-    <Container className="d-flex justify-content-center h4 m-0 h-100">
-      <div className="price">{amount.toLocaleString()}</div>
-      <Currency>تومان</Currency>
-    </Container>
-  )
-  : null;
+const Price = ({amount}) => (
+  <Container className="d-flex justify-content-center h4 m-0 h-100">
+    <div className="price">{amount.toLocaleString()}</div>
+    <Currency>تومان</Currency>
+  </Container>
+)
 
 Price.propTypes = {
-  amount: React.PropTypes.number
+  amount: React.PropTypes.number.isRequired
 };
 
 export default Price;
