@@ -1,0 +1,13 @@
+exports[`MainInfo renders 1`] = `
+<div>
+  <styled.h1>
+    test item
+  </styled.h1>
+  <CodeAndPrice
+    item={
+      Object {
+        "name": "test item",
+      }
+    } />
+</div>
+`;
