@@ -1,6 +1,6 @@
 import React from 'react';
-import TopBar from './components/TopBar'
-import Footer from './components/footer/Footer'
+import TopBar from '../components/TopBar'
+import Footer from '../components/footer/Footer'
 
 const App = ({location, children}) => (
   <div>
