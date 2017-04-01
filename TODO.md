@@ -7,6 +7,7 @@
 - [ ] User login Oauth
 - [ ] zoom image
 - [ ] structured data
+- [ ] change title on different pages
 - [x] random similar items (aghlam moshabe)
 - [x] card style
 - [x] Landing Image
