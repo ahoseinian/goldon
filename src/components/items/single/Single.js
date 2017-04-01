@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import styled from 'styled-components'
+import {Helmet} from 'react-helmet'
 import ItemImages from '../image/ImageGallery'
 import findById from '../../../reducers/items/findById'
 import similarItems from '../../../reducers/items/similarItems'
@@ -24,13 +25,15 @@ export class Single extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     window.scrollTo(0, 0)
-    document.title = nextProps.item.name
   }
 
   render() {
     const {item, similarItems} = this.props
     return !item ? null :(
       <Wrapper className="container">
+        <Helmet>
+          <title>{item.name}</title>
+        </Helmet>
         <div className="row">
           <div className="col-sm-4">
             <ItemImages images={item.images}/>

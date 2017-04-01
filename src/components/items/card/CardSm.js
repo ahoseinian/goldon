@@ -19,7 +19,7 @@ const Card = ({id, name, images, price}) => (
     <ItemCard className="card">
       <div className="row">
         <div className="col-5">
-          <ItemImage id={images[0]}/>
+          {images.length !== 0 && <ItemImage id={images[0]}/> }
         </div>
         <div className="col-7">
           <ItemName>{name}</ItemName>

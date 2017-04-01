@@ -1,6 +1,12 @@
 exports[`Single does not renders similarItems without them 1`] = `
 <styled.div
   className="container">
+  <HelmetWrapper
+    encodeSpecialCharacters={true}>
+    <title>
+      item name
+    </title>
+  </HelmetWrapper>
   <div
     className="row">
     <div
