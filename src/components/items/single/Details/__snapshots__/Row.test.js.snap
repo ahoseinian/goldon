@@ -1,0 +1,12 @@
+exports[`Row renders correctly with value 1`] = `
+<tr>
+  <th
+    width="120">
+    a
+  </th>
+  <td>
+    test
+     
+  </td>
+</tr>
+`;
