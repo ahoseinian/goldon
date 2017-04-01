@@ -6,6 +6,7 @@ const localStorageMock = {
   clear: jest.fn()
 };
 global.localStorage = localStorageMock
+global.scrollTo = jest.fn()
 
 beforeEach(() => {
   sinon.stub(console, 'error')

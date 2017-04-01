@@ -24,7 +24,13 @@ describe('Single', () => {
     )).toMatchSnapshot();
   })
 
-  it('scrolls to zero position')
+  it('scrolls to zero position', () => {
+    global.scrollTo = jest.fn()
+    const wrapper = shallow(<Single item={item} similarItems={[{}]}/>)
+    expect(global.scrollTo.mock.calls[0]).toEqual([0, 0])
+    wrapper.setProps({item: {...item, name: 'akbar'}})
+    expect(global.scrollTo.mock.calls[1]).toEqual([0, 0])
+  })
 
   it('changes document title', () => {
     const wrapper = shallow(<Single item={item} similarItems={[{}]}/>)

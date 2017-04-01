@@ -23,13 +23,17 @@ export class Single extends React.Component {
     item: React.PropTypes.object
   }
 
+  componentWillMount(){
+    window.scrollTo(0, 0)
+  }
+
   componentWillReceiveProps(nextProps) {
     window.scrollTo(0, 0)
   }
 
   render() {
     const {item, similarItems} = this.props
-    return !item ? null :(
+    return (
       <Wrapper className="container">
         <Helmet>
           <title>{item.name}</title>
