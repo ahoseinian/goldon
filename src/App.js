@@ -1,17 +1,16 @@
-import React, {Component} from 'react';
+import React from 'react';
 import TopBar from './components/TopBar'
 import Footer from './components/footer/Footer'
-import styled from 'styled-components'
 
-const App = ({pathname, children}) => (
+const App = ({location, children}) => (
   <div>
-    <TopBar pathname={pathname}/> {children}
+    <TopBar pathname={location.pathname}/> {children}
     <Footer/>
   </div>
 )
 
 App.propTypes = {
-  pathname: React.PropTypes.string.isRequired,
+  location: React.PropTypes.object.isRequired,
   children: React.PropTypes.oneOfType([
     React.PropTypes.arrayOf(React.PropTypes.node),
     React.PropTypes.node

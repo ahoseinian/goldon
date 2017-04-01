@@ -14,6 +14,7 @@ exports[`Single does not renders similarItems without them 1`] = `
         item={
           Object {
             "images": Array [],
+            "name": "item name",
           }
         } />
     </div>
@@ -26,6 +27,7 @@ exports[`Single does not renders similarItems without them 1`] = `
         item={
           Object {
             "images": Array [],
+            "name": "item name",
           }
         } />
     </div>

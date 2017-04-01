@@ -5,7 +5,7 @@ import App from './App'
 
 describe('App', () => {
   it('renders with children', () => {
-    const wrapper = shallow(<App pathname="/">test</App>)
+    const wrapper = shallow(<App location={{pathname:"/"}}>test</App>)
     expect(toJson(
       wrapper
     )).toMatchSnapshot()

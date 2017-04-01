@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import styled from 'styled-components'
-import ItemImage from '../image/ImageGallery'
+import ItemImages from '../image/ImageGallery'
 import findById from '../../../reducers/items/findById'
 import similarItems from '../../../reducers/items/similarItems'
 import Details from './Details'
@@ -16,27 +16,24 @@ const Wrapper = styled.div `
 
 export class Single extends React.Component {
   static propTypes = {
-    params: React.PropTypes.shape({id: React.PropTypes.string.isRequired}),
-    item: React.PropTypes.object.isRequired
-  }
-
-  componentDidMount() {
-    window.scrollTo(0, 0)
+    params: React.PropTypes.shape({
+      id: React.PropTypes.string.isRequired
+    }),
+    item: React.PropTypes.object
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.params !== nextProps.params) {
-      window.scrollTo(0, 0)
-    }
+    window.scrollTo(0, 0)
+    document.title = nextProps.item.name
   }
 
   render() {
     const {item, similarItems} = this.props
-    return (
+    return !item ? null :(
       <Wrapper className="container">
         <div className="row">
           <div className="col-sm-4">
-            <ItemImage images={item.images}/>
+            <ItemImages images={item.images}/>
           </div>
           <div className="col-sm-8 mt-2">
             <MainInfo item={item}/>
