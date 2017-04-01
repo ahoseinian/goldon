@@ -1,0 +1,23 @@
+exports[`SizeList renders 1`] = `
+<table
+  className="table table-bordered mt-4">
+  <tbody>
+    <SingleRow
+      measure="سانتی متر"
+      name="طول"
+      value={1} />
+    <SingleRow
+      measure="سانتی متر"
+      name="عرض"
+      value={2} />
+    <SingleRow
+      measure="سانتی متر"
+      name="ارتفاع"
+      value={3} />
+    <SingleRow
+      measure="سانتی متر"
+      name="قطر"
+      value={4} />
+  </tbody>
+</table>
+`;
