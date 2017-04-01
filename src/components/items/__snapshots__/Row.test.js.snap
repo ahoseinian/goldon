@@ -1,0 +1,24 @@
+exports[`Row renders 1`] = `
+<tr>
+  <styled.td />
+  <styled.td />
+  <styled.td>
+    <div
+      className="d-flex">
+      <styled.div>
+        2
+      </styled.div>
+      <Price
+        value={235} />
+    </div>
+    <Price
+      value={470} />
+  </styled.td>
+  <styled.td
+    className="text-center remove-from-cart"
+    onClick={[Function]}>
+    <Icon
+      name="times" />
+  </styled.td>
+</tr>
+`;

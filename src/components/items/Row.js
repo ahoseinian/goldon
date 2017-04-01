@@ -14,25 +14,34 @@ const LeftBorder = styled.div `
   padding-left: 1rem;
 `
 
-const Row = ({item, removeFromCart}) => (
+const Row = ({images, name, quantity, price, removeFromCart}) => (
   <tr>
     <Td>
-      <SmallImage id={item.images[0]}/>
+      { images &&
+        <SmallImage id={images[0]}/>
+      }
     </Td>
-    <Td>{item.name}</Td>
+    <Td>{name}</Td>
     <Td>
       <div className="d-flex">
         <LeftBorder>
-          {item.quantity}
+          {quantity}
         </LeftBorder>
-        <Price value={item.price}/>
+        <Price value={price}/>
       </div>
-      <Price value={item.price * item.quantity}/>
+      <Price value={price * quantity}/>
     </Td>
-    <Td className="text-center" onClick={() => item.removeFromCart()}>
+    <Td className="text-center remove-from-cart" onClick={() => removeFromCart()}>
       <Icon name="times" />
     </Td>
   </tr>
 )
+
+Row.propTypes = {
+  images: React.PropTypes.array,
+  price: React.PropTypes.number.isRequired,
+  quantity: React.PropTypes.number.isRequired,
+  removeFromCart: React.PropTypes.func
+}
 
 export default Row
