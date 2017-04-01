@@ -1,0 +1,10 @@
+exports[`DetailsList renders 1`] = `
+<div>
+  <SingleRowTable
+    name="مدل" />
+  <SingleRowTable
+    name="رنگهای موجود" />
+  <SingleRowTable
+    name="نام های دیگر" />
+</div>
+`;
