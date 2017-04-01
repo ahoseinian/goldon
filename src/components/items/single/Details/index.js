@@ -8,7 +8,7 @@ const Details = ({item}) => (
   <div>
     <Card className="card-block">
       <SizeList {...item.size}/>
-      <DetailsList item={item}/>
+      <DetailsList {...item}/>
     </Card>
     <SimpleCard title="نگهداری">{item.maintenance}</SimpleCard>
     <SimpleCard title="توضیحات">{item.information}</SimpleCard>

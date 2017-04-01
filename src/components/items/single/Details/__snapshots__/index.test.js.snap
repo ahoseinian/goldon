@@ -1,0 +1,19 @@
+exports[`item > single> Details > index renders 1`] = `
+<div>
+  <styled.div
+    className="card-block">
+    <SizeList />
+    <DetailsList
+      colors={Array []}
+      modelsNames={Array []}
+      names={Array []}
+      size={Object {}} />
+  </styled.div>
+  <SimpleCard
+    title="نگهداری" />
+  <SimpleCard
+    title="توضیحات" />
+  <SimpleCard
+    title="خواص" />
+</div>
+`;
