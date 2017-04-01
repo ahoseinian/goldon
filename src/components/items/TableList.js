@@ -14,7 +14,7 @@ const TableList = ({items}) => (
         </tr>
       </thead>
       <tbody>
-        {items.map(x => <Row item={x} key={x.id}/>)}
+        {items.map(x => <Row {...x} key={x.id}/>)}
       </tbody>
     </table>
   </div>
