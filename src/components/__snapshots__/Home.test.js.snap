@@ -1,5 +1,11 @@
 exports[`Home renders 1`] = `
 <div>
+  <HelmetWrapper
+    encodeSpecialCharacters={true}>
+    <title>
+      میاریم
+    </title>
+  </HelmetWrapper>
   <PageHead />
   <div
     className="container">
@@ -14,6 +20,12 @@ exports[`Home renders 1`] = `
 
 exports[`Home renders items 1`] = `
 <div>
+  <HelmetWrapper
+    encodeSpecialCharacters={true}>
+    <title>
+      میاریم
+    </title>
+  </HelmetWrapper>
   <PageHead />
   <div
     className="container">
