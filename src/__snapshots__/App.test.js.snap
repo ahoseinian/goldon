@@ -1,0 +1,9 @@
+exports[`App renders with children 1`] = `
+<div>
+  <TopBar
+    pathname="/" />
+   
+  test
+  <Footer />
+</div>
+`;

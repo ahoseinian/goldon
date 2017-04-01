@@ -3,19 +3,19 @@ import TopBar from './components/TopBar'
 import Footer from './components/footer/Footer'
 import styled from 'styled-components'
 
-const AppContainer = styled.div `
-`
+const App = ({pathname, children}) => (
+  <div>
+    <TopBar pathname={pathname}/> {children}
+    <Footer/>
+  </div>
+)
 
-class App extends Component {
-  render() {
-    const {children, location} = this.props
-    return (
-      <AppContainer>
-        <TopBar location={location}/> {children}
-        <Footer/>
-      </AppContainer>
-    );
-  }
+App.propTypes = {
+  pathname: React.PropTypes.string.isRequired,
+  children: React.PropTypes.oneOfType([
+    React.PropTypes.arrayOf(React.PropTypes.node),
+    React.PropTypes.node
+  ])
 }
 
 export default App
