@@ -1,0 +1,40 @@
+exports[`Router renders 1`] = `
+<Router
+  history={
+    Object {
+      "createHref": [Function],
+      "createKey": [Function],
+      "createLocation": [Function],
+      "createPath": [Function],
+      "getCurrentLocation": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "listen": [Function],
+      "listenBefore": [Function],
+      "push": [Function],
+      "replace": [Function],
+      "transitionTo": [Function],
+    }
+  }
+  render={[Function]}>
+  <Route
+    component={[Function]}
+    path="/">
+    <IndexRoute
+      component={[Function]} />
+    <Route
+      component={[Function]}
+      path="/cart" />
+    <Route
+      component={[Function]}
+      path="/cart/finish" />
+    <Route
+      component={[Function]}
+      path="/items/:id(/:name)" />
+    <Route
+      component={[Function]}
+      path="*" />
+  </Route>
+</Router>
+`;
