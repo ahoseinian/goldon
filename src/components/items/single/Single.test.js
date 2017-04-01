@@ -14,7 +14,7 @@ describe('Single', () => {
     const wrapper = shallow(<Single item={item}/>)
     expect(toJson(
       wrapper
-    )).toMatchSnapshot();
+    )).toMatchSnapshot()
   })
 
   it('renders similarItems', () => {
