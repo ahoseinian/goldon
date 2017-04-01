@@ -1,7 +1,7 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import {Single} from './Single'
 import toJson from 'enzyme-to-json'
+import {Single} from './Single'
 
 describe('Single', () => {
   it('does not renders similarItems without them', () => {
