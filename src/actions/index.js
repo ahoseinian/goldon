@@ -6,7 +6,8 @@ import {
   TOGGLE_CART_VISIBILITY,
   REMOVE_FROM_CART,
   COMPLETE_CART_ORDER,
-  RESET_SEARCH
+  RESET_SEARCH,
+  SHOW_IN_GALLERY
 } from './action-types'
 
 export const getAllItems = () => ({
@@ -24,4 +25,9 @@ export const completeCartOrder = (data) => ({
   payload: request
     .post('/api/cart')
     .send(data)
+})
+
+export const showInGallery = (id) => ({
+  type: SHOW_IN_GALLERY,
+  id
 })
