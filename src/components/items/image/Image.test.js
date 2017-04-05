@@ -15,4 +15,9 @@ describe('Image', () => {
     expect(zoomFunc.mock.calls.length).toEqual(1)
   })
 
+  it('does not throw error when clicked without click handler', () => {
+    const wrapper = shallow(<Image id="1f356"/>)
+    wrapper.simulate('click')
+    expect(console.error.called).toEqual(false)
+  })
 })
