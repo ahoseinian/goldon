@@ -7,7 +7,8 @@ import {
   REMOVE_FROM_CART,
   COMPLETE_CART_ORDER,
   RESET_SEARCH,
-  SHOW_IN_GALLERY
+  SHOW_IN_GALLERY,
+  CLOSE_GALLERY
 } from './action-types'
 
 export const getAllItems = () => ({
@@ -31,3 +32,5 @@ export const showInGallery = (id) => ({
   type: SHOW_IN_GALLERY,
   id
 })
+
+export const closeGallery = () => ({ type: CLOSE_GALLERY })

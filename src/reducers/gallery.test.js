@@ -1,5 +1,5 @@
 import gallery from './gallery'
-import {showInGallery} from '../actions'
+import {showInGallery, closeGallery} from '../actions'
 
 describe('gallery reducer', () => {
   const defaultState = {isOpen: false, id: null}
@@ -19,5 +19,16 @@ describe('gallery reducer', () => {
       isOpen: true,
       id: '2fffgg'
     })
+  })
+
+  it('falsify isOpen after dispatching closeGallery', () => {
+    expect(
+      gallery(
+        defaultState,
+        closeGallery()
+      ).toEqual(
+        {isOpen: false, id: null}
+      )
+    )
   })
 })
