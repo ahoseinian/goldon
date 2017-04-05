@@ -4,7 +4,8 @@ import ImageList from './ImageList'
 
 class ImageGallery extends Component {
   static propTypes = {
-    images: PropTypes.array.isRequired
+    images: PropTypes.array.isRequired,
+    handleZoom: PropTypes.func
   }
 
   state = {
@@ -14,16 +15,16 @@ class ImageGallery extends Component {
   imageClicked(current){
     this.setState({current});
   }
-  
+
   componentWillReceiveProps(nextProps){
     this.setState({current: nextProps.images[0]})
   }
 
   render() {
-    const {images} = this.props;
+    const {images, handleZoom} = this.props;
     return (
       <div>
-        <Image id={this.state.current}/>
+        <Image id={this.state.current} handleZoom={handleZoom}/>
         <ImageList images={images} imageClicked={this.imageClicked.bind(this)}/>
       </div>
     )
