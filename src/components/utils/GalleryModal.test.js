@@ -1,7 +1,7 @@
 import React from 'react'
 import {shallow} from 'enzyme'
 import Modal from 'react-modal'
-import GalleryModal from './GalleryModal'
+import {GalleryModal} from './GalleryModal'
 
 describe('GalleryModal', () => {
   it('renders', () => {
@@ -19,6 +19,5 @@ describe('GalleryModal', () => {
     expect(
       modal.props().isOpen
     ).toEqual(true)
-    
   })
 })

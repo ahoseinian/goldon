@@ -1,7 +1,7 @@
 import React from 'react'
 import Modal from 'react-modal'
 
-const GalleryModal = ({isOpen, src}) => (
+export const GalleryModal = ({isOpen, src}) => (
   <Modal contentLabel="Gallery" isOpen={isOpen}>
 
   </Modal>
