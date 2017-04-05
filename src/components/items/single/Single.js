@@ -2,9 +2,10 @@ import React from 'react';
 import {connect} from 'react-redux'
 import styled from 'styled-components'
 import {Helmet} from 'react-helmet'
-import ItemImages from '../image/ImageGallery'
+import ImageGallery from '../image/ImageGallery'
 import findById from '../../../reducers/items/findById'
 import similarItems from '../../../reducers/items/similarItems'
+import showInGallery from '../../../actions'
 import Details from './Details'
 import MainInfo from './MainInfo'
 import List from '../list'
@@ -20,7 +21,8 @@ export class Single extends React.Component {
     params: React.PropTypes.shape({
       id: React.PropTypes.string.isRequired
     }),
-    item: React.PropTypes.object
+    item: React.PropTypes.object,
+    handleZoom: React.PropTypes.func
   }
 
   componentWillMount(){
@@ -32,7 +34,7 @@ export class Single extends React.Component {
   }
 
   render() {
-    const {item, similarItems} = this.props
+    const {item, similarItems, handleZoom} = this.props
     return (
       <Wrapper className="container">
         <Helmet>
@@ -40,7 +42,7 @@ export class Single extends React.Component {
         </Helmet>
         <div className="row">
           <div className="col-sm-4">
-            <ItemImages images={item.images}/>
+            <ImageGallery images={item.images} handleZoom={handleZoom}/>
           </div>
           <div className="col-sm-8 mt-2">
             <MainInfo item={item}/>
@@ -64,9 +66,11 @@ export class Single extends React.Component {
   }
 }
 
-
-
-export default connect((state, {params}) => ({
+export const mapStateToProps = (state, {params}) => ({
   item: findById(state.items, params.id),
   similarItems: similarItems(state.items, params.id)
-}))(Single);
+})
+
+export const mapDispatchToProps = { showInGallery }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Single);
