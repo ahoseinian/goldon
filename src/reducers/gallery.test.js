@@ -11,10 +11,7 @@ describe('gallery reducer', () => {
 
   it('changes the state after dispatching showInGallery', () => {
     expect(
-      gallery(
-        defaultState,
-        showInGallery('2fffgg')
-      )
+      gallery( defaultState, showInGallery('2fffgg') )
     ).toEqual({
       isOpen: true,
       id: '2fffgg'
@@ -23,12 +20,9 @@ describe('gallery reducer', () => {
 
   it('falsify isOpen after dispatching closeGallery', () => {
     expect(
-      gallery(
-        defaultState,
-        closeGallery()
-      ).toEqual(
-        {isOpen: false, id: null}
-      )
+      gallery( defaultState, closeGallery() )
+    ).toEqual(
+      {isOpen: false, id: null}
     )
   })
 })
