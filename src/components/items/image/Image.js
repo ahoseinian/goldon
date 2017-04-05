@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Image = styled.img `
   width: 100%;
 `
-const ItemImage = ({id, handleZoom}) => (
+const ItemImage = ({id, handleZoom = function(){} }) => (
   <Image
     src={'/images/thumbs/' + id + '.jpg'}
     onClick={() => handleZoom(id)}

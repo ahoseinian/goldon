@@ -14,4 +14,5 @@ describe('Image', () => {
     wrapper.simulate('click')
     expect(zoomFunc.mock.calls.length).toEqual(1)
   })
+
 })
