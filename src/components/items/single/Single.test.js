@@ -66,6 +66,6 @@ describe('mapStateToProps', () => {
 
 describe('mapDispatchToProps', () => {
   it('returns showInGallery function', () => {
-    expect(typeof mapDispatchToProps.showInGallery).toEqual('func')
+    expect(typeof mapDispatchToProps.showInGallery).toEqual('function')
   })
 });
