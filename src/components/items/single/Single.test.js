@@ -2,6 +2,7 @@ import React from 'react'
 import {shallow} from 'enzyme'
 import toJson from 'enzyme-to-json'
 import ImageGallery from '../image/ImageGallery'
+import GalleryModal from '../../utils/GalleryModal'
 import {Helmet} from 'react-helmet'
 import {Single, mapStateToProps, mapDispatchToProps} from './Single'
 import store from '../../../store'
@@ -42,8 +43,13 @@ describe('Single', () => {
 
   it('paths handleZoom prop to ImageGallery', () => {
     const handleZoomFunc = jest.fn()
-    const wrapper = shallow(<Single item={item} similarItems={[{}]} handleZoom={handleZoomFunc}/>)
+    const wrapper = shallow(<Single item={item} similarItems={[{}]} showInGallery={handleZoomFunc}/>)
     expect(wrapper.find(ImageGallery).props().handleZoom).toEqual(handleZoomFunc)
+  })
+
+  it('has GalleryModal component', () => {
+    const wrapper = shallow(<Single item={item} similarItems={[{}]}/>)
+    expect(wrapper.find(GalleryModal).length).toEqual(1)
   })
 })
 

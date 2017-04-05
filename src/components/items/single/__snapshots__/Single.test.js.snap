@@ -1,6 +1,7 @@
 exports[`Single does not renders similarItems without them 1`] = `
 <styled.div
   className="container">
+  <Connect(Component) />
   <HelmetWrapper
     encodeSpecialCharacters={true}>
     <title>

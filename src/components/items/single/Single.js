@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import styled from 'styled-components'
 import {Helmet} from 'react-helmet'
 import ImageGallery from '../image/ImageGallery'
+import GalleryModal from '../../utils/GalleryModal'
 import findById from '../../../reducers/items/findById'
 import similarItems from '../../../reducers/items/similarItems'
 import {showInGallery} from '../../../actions'
@@ -34,15 +35,16 @@ export class Single extends React.Component {
   }
 
   render() {
-    const {item, similarItems, handleZoom} = this.props
-    return (
+    const {item, similarItems, showInGallery} = this.props
+    return !item ? null :(
       <Wrapper className="container">
+        <GalleryModal />
         <Helmet>
           <title>{item.name}</title>
         </Helmet>
         <div className="row">
           <div className="col-sm-4">
-            <ImageGallery images={item.images} handleZoom={handleZoom}/>
+            <ImageGallery images={item.images} handleZoom={showInGallery}/>
           </div>
           <div className="col-sm-8 mt-2">
             <MainInfo item={item}/>
