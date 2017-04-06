@@ -4,7 +4,10 @@ import Footer from '../components/footer/Footer'
 
 const App = ({location, children}) => (
   <div>
-    <TopBar pathname={location.pathname}/> {children}
+    <TopBar pathname={location.pathname}/>
+    <div style={{marginTop:'3.5rem'}}>
+      {children}
+    </div>
     <Footer/>
   </div>
 )
