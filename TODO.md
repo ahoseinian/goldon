@@ -5,8 +5,8 @@
 - [ ] Automatic pagination
 - [ ] Commenting section
 - [ ] User login Oauth
-- [ ] zoom image
 - [ ] structured data
+- [x] zoom image
 - [x] change title on different pages
 - [x] random similar items (aghlam moshabe)
 - [x] card style
