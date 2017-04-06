@@ -19,7 +19,7 @@ export const getAllItems = () => ({
 export const setSearchValue = (field, payload) => ({type: SET_SEARCH_VALUE, field, payload})
 export const addItemToCart = (item) => ({type: ADD_ITEM_TO_CART, item})
 export const toggleCartVisibility = () => ({type: TOGGLE_CART_VISIBILITY})
-export const removeFromCart = (item) => ({type: REMOVE_FROM_CART, item})
+export const removeFromCart = (id) => ({type: REMOVE_FROM_CART, id})
 export const resetSearch = () => ({type: RESET_SEARCH})
 export const completeCartOrder = (data) => ({
   type: COMPLETE_CART_ORDER,

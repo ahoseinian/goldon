@@ -1,4 +1,6 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {removeFromCart} from '../../actions'
 import SmallImage from './image/SmallImage'
 import Price from './Price'
 import styled from 'styled-components'
@@ -14,7 +16,7 @@ const LeftBorder = styled.div `
   padding-left: 1rem;
 `
 
-const Row = ({images, name, quantity, price, removeFromCart}) => (
+export const Row = ({id, images, name, quantity, price, removeFromCart}) => (
   <tr>
     <Td>
       { images &&
@@ -31,17 +33,18 @@ const Row = ({images, name, quantity, price, removeFromCart}) => (
       </div>
       <Price value={price * quantity}/>
     </Td>
-    <Td className="text-center remove-from-cart" onClick={() => removeFromCart()}>
+    <Td className="text-center remove-from-cart" onClick={() => removeFromCart(id)}>
       <Icon name="times" />
     </Td>
   </tr>
 )
 
 Row.propTypes = {
+  id: React.PropTypes.string.isRequired,
   images: React.PropTypes.array,
   price: React.PropTypes.number.isRequired,
   quantity: React.PropTypes.number.isRequired,
   removeFromCart: React.PropTypes.func
 }
 
-export default Row
+export default connect(null, {removeFromCart})(Row)

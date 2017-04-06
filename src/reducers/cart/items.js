@@ -1,6 +1,5 @@
 import {ADD_ITEM_TO_CART, REMOVE_FROM_CART, COMPLETE_CART_ORDER_FULFILLED} from '../../actions/action-types'
 import unionBy from 'lodash.unionby'
-import Item from './itemClass'
 
 const isEqual = (item) => (x) => x.id === item.id
 const addOne = (value) => value
@@ -25,10 +24,10 @@ const items = (state = defaultState, action) => {
   let newItems
   switch (action.type) {
     case ADD_ITEM_TO_CART:
-      newItems = unionItems(state, new Item(action.item));
+      newItems = unionItems(state, action.item);
       break;
     case REMOVE_FROM_CART:
-      newItems = state.filter((x) => action.item.id !== x.id);
+      newItems = state.filter((x) => action.id !== x.id);
       break;
     case COMPLETE_CART_ORDER_FULFILLED:
       newItems = [];

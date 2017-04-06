@@ -1,10 +1,11 @@
 import React from 'react'
 import {shallow} from 'enzyme'
 import toJson from 'enzyme-to-json'
-import Row from './Row'
+import {Row} from './Row'
 import SmallImage from './image/SmallImage'
 
 const item = {
+  id: 'testId',
   price: 235,
   quantity: 2
 }
@@ -33,6 +34,7 @@ describe('Row', () => {
     const removeButton = wrapper.find('.remove-from-cart')
     removeButton.simulate('click')
     expect(removeFn.mock.calls.length).toEqual(1)
+    expect(removeFn.mock.calls[0][0]).toEqual('testId')
 
   })
 })
